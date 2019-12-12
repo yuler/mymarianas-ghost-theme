@@ -271,7 +271,7 @@ body {
     right: 0;
     left: 0;
     z-index: 1000;
-    background: color(var(--darkgrey) l(-5%));
+    background: rgba(255, 255, 255, .9);
 }
 
 .site-nav {
@@ -280,8 +280,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    overflow-y: hidden;
-    height: 64px;
+    height: 80px;
     font-size: 1.3rem;
 }
 
@@ -304,23 +303,21 @@ body {
 .site-header-background:not(.responsive-header-img) .site-nav-left-wrapper:after,
 .site-nav-main .site-nav-left-wrapper:after {
     right: 0;
-    background: linear-gradient(to right, color(var(--darkgrey) l(-5%) a(0)) 0%,color(var(--darkgrey) l(-5%)) 100%);
+    /* background: linear-gradient(to right, color(var(--darkgrey) l(-5%) a(0)) 0%,color(var(--darkgrey) l(-5%)) 100%); */
 }
 
 .site-nav-left {
     flex: 1 0 auto;
     display: flex;
     align-items: center;
-    overflow-x: auto;
-    overflow-y: hidden;
+    /* overflow-x: auto;
+    overflow-y: hidden; */
     -webkit-overflow-scrolling: touch;
     margin-right: 10px;
-    padding: 10px 0 80px;
     font-weight: 500;
     letter-spacing: 0.2px;
     text-transform: uppercase;
     white-space: nowrap;
-
     -ms-overflow-scrolling: touch;
 }
 
@@ -357,8 +354,10 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .site-nav-logo img {
     display: block;
-    width: auto;
-    height: 21px;
+    width: 218px;
+    height: 157px;
+    position: relative;
+    top: -22px;
 }
 
 .site-home-header .site-nav-logo {
@@ -389,8 +388,9 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .nav li a {
     position: relative;
     display: block;
-    padding: 12px 12px;
-    color: #fff;
+    padding: 30px 20px;
+    color: black;
+    font-size: 1.8rem;
     opacity: 0.8;
     transition: opacity 0.35s ease-in-out;
 }
@@ -407,7 +407,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     bottom: 8px;
     left: 12px;
     height: 1px;
-    background: #fff;
+    background: black;
     opacity: 0.25;
     transition: all 0.35s ease-in-out;
 }
@@ -456,8 +456,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 10px 0;
-    height: 64px;
 }
 
 .site-nav-right .nav {
@@ -548,6 +546,29 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     margin-bottom: 1px;
     height: 2.1rem;
     fill: #fff;
+}
+
+.nav li:hover .nav-sublevel {
+    display: flex;
+}
+
+.nav-sublevel {
+    padding: 1rem 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 1s;
+    display: none;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.nav-sublevel a {
+    height: 3rem!important;
+    padding: 0rem!important;
+    font-size: 1.4rem!important;
+    text-align: center;
+}
+.nav-sublevel a::before {
+    display: none;
 }
 
 /* Special behaviors for home navigation */
