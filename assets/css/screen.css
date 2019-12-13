@@ -61,7 +61,7 @@ body {
 }
 
 .site-main {
-    /*z-index: 100;*/
+    z-index: 100;
     flex-grow: 1;
 }
 
@@ -574,7 +574,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 /* Special behaviors for home navigation */
 
 .home-template .site-nav-main {
-    z-index: 100;
+    z-index: 101;
 }
 
 .home-template .site-nav-main .site-nav {
