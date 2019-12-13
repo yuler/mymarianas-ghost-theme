@@ -10,10 +10,16 @@
     <title>{{meta_title}}</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    
     {{!-- Styles'n'Scripts --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "built/swiper.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
-
+    
+    <style>
+        .swiper-container {
+            width: 100%;
+        }
+    </style>
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
 
@@ -116,6 +122,29 @@
                 $('.subscribe-overlay form').removeClass();
                 $('.subscribe-email').val('');
             });
+
+            // Init Swiper
+            var mySwiper = new Swiper('.swiper-container', {
+                // Optional parameters
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                // If we need pagination
+                pagination: {
+                  el: '.swiper-pagination',
+                },
+                // Navigation arrows
+                navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                },
+                // And if we need scrollbar
+                scrollbar: {
+                  el: '.swiper-scrollbar',
+                },
+            })
         });
     </script>
 
