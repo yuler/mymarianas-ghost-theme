@@ -17,7 +17,7 @@ into the {body} of the default.hbs template --}}
     flex: 1;
   }
 
- .gl-list{ background: url(http://www.mymarianas.cn/Public/assets/images/gl0.png); width: 100%; height: 900px; }
+ .gl-list{ background: url("{{asset 'imgs/gl0.png'}}"); width: 100%; height: 900px; }
  .gl-list .gl1{ padding-left: 338px; }
  .gl-list .gl2{ padding: 180px 0 0 401px; }
  .gl-list .gl3{  }
@@ -65,20 +65,20 @@ into the {body} of the default.hbs template --}}
 
 <div class="inner">
   <div class="u-flex u-flex-center" style="margin: 30px 0;margin-bottom: 100px;">
-    <img src="http://www.mymarianas.cn/Public/assets/images/my.jpg" alt="logo">
+    <img src="{{asset 'imgs/my.jpg' }}" alt="logo">
   </div>
   <div class="u-flex">
     <a href="" class="u-flex1" style="position: relative;">
-      <img class="u-width-full" src="http://www.mymarianas.cn/Public/assets/images/tianning.png">
-      <img class="u-width-full" src="http://www.mymarianas.cn/Public/assets/images/tinning-bg.png" style="position: absolute;left: 0;">
+      <img class="u-width-full" src="{{asset 'imgs/tianning.png'}}">
+      <img class="u-width-full" src="{{asset 'imgs/tinning-bg.png'}}" style="position: absolute;left: 0;">
     </a>
     <a href="" class="u-flex1" style="position: relative;">
-      <img class="u-width-full" src="http://www.mymarianas.cn/Public/assets/images/saiban.png" style="margin-top: -50px;">
-      <img class="u-width-full" src="http://www.mymarianas.cn/Public/assets/images/saiban-bg.png" style="position: absolute;left: 0;top: -50px;">
+      <img class="u-width-full" src="{{asset 'imgs/saiban.png'}}" style="margin-top: -50px;">
+      <img class="u-width-full" src="{{asset 'imgs/saiban-bg.png'}}" style="position: absolute;left: 0;top: -50px;">
     </a>
     <a href="" class="u-flex1" style="position: relative;">
-      <img class="u-width-full" src="http://www.mymarianas.cn/Public/assets/images/luota.png">
-      <img class="u-width-full" src="http://www.mymarianas.cn/Public/assets/images/luota-bg.png" style="position: absolute;left: 0;">
+      <img class="u-width-full" src="{{asset 'imgs/luota.png'}}">
+      <img class="u-width-full" src="{{asset 'imgs/luota-bg.png'}}" style="position: absolute;left: 0;">
     </a>
   </div>
 </div>
@@ -90,10 +90,10 @@ into the {body} of the default.hbs template --}}
   </div>
   <div class="gl-list">
     <ul style="margin: 0;padding: 0;list-style:none;">
-      <li class="gl1"><a href="/index/community.html#a1"><img src="http://www.mymarianas.cn/Public/assets/images/gl1.png" alt=""></a></li>
-      <li class="gl2"><a href="/index/community.html#a2"><img src="http://www.mymarianas.cn/Public/assets/images/gl2.png" alt=""></a></li>
-      <li class="gl3"><a href="/index/community.html#a3"><img src="http://www.mymarianas.cn/Public/assets/images/gl3.png" alt=""></a></li>
-      <li class="gl4"><a href="/index/community.html#a4"><img src="http://www.mymarianas.cn/Public/assets/images/gl4.png" alt=""></a></li>
+      <li class="gl1"><a href="/index/community.html#a1"><img src="{{asset 'imgs/gl1.png'}}" alt=""></a></li>
+      <li class="gl2"><a href="/index/community.html#a2"><img src="{{asset 'imgs/gl2.png'}}" alt=""></a></li>
+      <li class="gl3"><a href="/index/community.html#a3"><img src="{{asset 'imgs/gl3.png'}}" alt=""></a></li>
+      <li class="gl4"><a href="/index/community.html#a4"><img src="{{asset 'imgs/gl4.png'}}" alt=""></a></li>
     </ul>
   </div>
 </div>
@@ -128,42 +128,42 @@ into the {body} of the default.hbs template --}}
 <ul class="bottomPhotoWall">
   <li>
     <a href="http://www.mymarianas.cn/index/content/sence_id/35.html">
-      <img src="http://www.mymarianas.cn/Public/images/banner/1531189256.jpg" alt="">
+      <img src="{{asset 'imgs/1531189256.jpg'}}">
     </a>
   </li>
   <li>
     <a href="http://www.mymarianas.cn/index/content/sence_id/93.html">
-    <img src="http://www.mymarianas.cn/Public/images/banner/1531189260.jpg"
+    <img src="{{asset 'imgs/1531189260.jpg'}}"
         alt=""></a>
   </li>
   <li>
     <a href="http://www.mymarianas.cn/index/content/sence_id/36.html">
-    <img src="http://www.mymarianas.cn/Public/images/banner/1531189264.jpg"
+    <img src="{{asset 'imgs/1531189264.jpg'}}"
         alt=""></a>
   </li>
   <li>
     <a href="http://www.mymarianas.cn/index/content/sence_id/32.html">
-    <img src="http://www.mymarianas.cn/Public/images/banner/1531189271.jpg"
+    <img src="{{asset 'imgs/1531189271.jpg'}}"
         alt=""></a>
   </li>
   <li>
     <a href="http://www.mymarianas.cn/index/content/sence_id/33.html">
-    <img src="http://www.mymarianas.cn/Public/images/banner/1531189279.jpg"
+    <img src="{{asset 'imgs/1531189279.jpg'}}"
         alt=""></a>
   </li>
   <li>
     <a href="http://www.mymarianas.cn/index/content/sence_id/31.html">
-    <img src="http://www.mymarianas.cn/Public/images/banner/1531189284.jpg"
+    <img src="{{asset 'imgs/1531189284.jpg'}}"
         alt=""></a>
   </li>
   <li>
     <a href="http://www.mymarianas.cn/index/content/sence_id/34.html">
-    <img src="http://www.mymarianas.cn/Public/images/banner/1531189291.jpg"
+    <img src="{{asset 'imgs/1531189291.jpg'}}"
         alt=""></a>
   </li>
   <li>
     <a href="http://www.mymarianas.cn/index/content/sence_id/92.html">
-    <img src="http://www.mymarianas.cn/Public/images/banner/1531189296.jpg"
+    <img src="{{asset 'imgs/1531189296.jpg'}}"
         alt=""></a>
   </li>
 </ul>
