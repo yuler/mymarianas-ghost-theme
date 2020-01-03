@@ -4,35 +4,166 @@ into the {body} of the default.hbs template --}}
 
 {{> site-header}}
 
+<style>
+  .bottomPhotoWall {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+  }
+  .bottomPhotoWall li {
+    padding: 0;
+    margin: 0;
+    flex: 1;
+  }
+
+ .gl-list{ background: url(http://www.mymarianas.cn/Public/assets/images/gl0.png); width: 100%; height: 900px; }
+ .gl-list .gl1{ padding-left: 338px; }
+ .gl-list .gl2{ padding: 180px 0 0 401px; }
+ .gl-list .gl3{  }
+ .gl-list .gl4{ padding-left: 718px; }
+ .gl-list li { margin: 0;padding: 0;}
+ .gl-list li a,.gonglue .gl-list li a img{ display: block; }
+
+  .bottomPhotoWall li img{
+    width: 100%;
+  }
+  .u-flex {
+    display: flex;
+  }
+  .u-flex1 {
+    flex: 1;
+  }
+  .u-flex-center {
+    align-items: center;
+    justify-content: center;
+  }
+  .u-width-full {
+    width: 100%;
+  }
+  p {
+    margin: 0;
+  }
+</style>
+
 <div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <img src="http://www.mymarianas.cn/Public/images/banner/1530763160.jpg" alt="banner1">
-        </div>
-        <div class="swiper-slide">
-            <img src="http://www.mymarianas.cn/Public/images/banner/1530763131.jpg" alt="banner2">
-        </div>
-        <div class="swiper-slide">
-            <img src="http://www.mymarianas.cn/Public/images/banner/1530763135.jpg" alt="banner3">
-        </div>
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="{{asset 'imgs/banner1.jpg' }}" alt="banner1" style="width:100%;">
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-scrollbar"></div>
+    <div class="swiper-slide">
+      <img src="{{asset 'imgs/banner2.jpg' }}" alt="banner2" style="width:100%;">
+    </div>
+    <div class="swiper-slide">
+      <img src="{{asset 'imgs/banner3.jpg' }}" alt="banner3" style="width:100%;">
+    </div>
+  </div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-scrollbar"></div>
 </div>
 
-{{!-- The main content area --}}
-<main id="site-main" class="site-main outer">
-    <div class="inner posts">
+<div class="inner">
+  <div class="u-flex u-flex-center" style="margin: 30px 0;margin-bottom: 100px;">
+    <img src="http://www.mymarianas.cn/Public/assets/images/my.jpg" alt="logo">
+  </div>
+  <div class="u-flex">
+    <a href="" class="u-flex1" style="position: relative;">
+      <img class="u-width-full" src="http://www.mymarianas.cn/Public/assets/images/tianning.png">
+      <img class="u-width-full" src="http://www.mymarianas.cn/Public/assets/images/tinning-bg.png" style="position: absolute;left: 0;">
+    </a>
+    <a href="" class="u-flex1" style="position: relative;">
+      <img class="u-width-full" src="http://www.mymarianas.cn/Public/assets/images/saiban.png" style="margin-top: -50px;">
+      <img class="u-width-full" src="http://www.mymarianas.cn/Public/assets/images/saiban-bg.png" style="position: absolute;left: 0;top: -50px;">
+    </a>
+    <a href="" class="u-flex1" style="position: relative;">
+      <img class="u-width-full" src="http://www.mymarianas.cn/Public/assets/images/luota.png">
+      <img class="u-width-full" src="http://www.mymarianas.cn/Public/assets/images/luota-bg.png" style="position: absolute;left: 0;">
+    </a>
+  </div>
+</div>
 
-        <div class="post-feed">
-            {{#foreach posts}}
+<div class="inner">
+  <div class="u-flex" style="align-items: center;height: 40px;">
+    <h2 style="margin: 0;">旅游攻略</h2>
+    <p style="margin: 0;margin-left: 10px;font-size: 14px;">Travel Notes</p>
+  </div>
+  <div class="gl-list">
+    <ul style="margin: 0;padding: 0;list-style:none;">
+      <li class="gl1"><a href="/index/community.html#a1"><img src="http://www.mymarianas.cn/Public/assets/images/gl1.png" alt=""></a></li>
+      <li class="gl2"><a href="/index/community.html#a2"><img src="http://www.mymarianas.cn/Public/assets/images/gl2.png" alt=""></a></li>
+      <li class="gl3"><a href="/index/community.html#a3"><img src="http://www.mymarianas.cn/Public/assets/images/gl3.png" alt=""></a></li>
+      <li class="gl4"><a href="/index/community.html#a4"><img src="http://www.mymarianas.cn/Public/assets/images/gl4.png" alt=""></a></li>
+    </ul>
+  </div>
+</div>
 
-                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                {{> "post-card"}}
-
-            {{/foreach}}
-        </div>
-
+<div class="inner u-flex" style="margin-top: 100px;margin-bottom: 50px;">
+  <div class="u-flex1" style="border-right: 1px solid #eee; padding-right: 50px;overflow: hidden;">
+    <div class="u-flex" style="align-items: center;height: 40px;">
+      <h2 class="u-flex1" style="margin: 0;">马里亚纳观光局官方新闻</h2>
+      <p style="margin: 0;">More >></p>
     </div>
-</main>
+    <ul style="list-style:none;padding:0;">
+      {{#foreach posts}}
+        <li style="height: 50px;">
+          <a href="{{url}}" class="u-flex u-flex-center" style="cursor:pointer;color:initial;text-decoration:none!important;">
+            <p style="width:20px;height:20px;background:#0283ad;color:white;line-height:20px;text-align:center;">{{@number}}</p>
+            <p class="u-flex1" style="margin:0 20px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{{title}}</p>
+            <p style="font-size: 12px;color:#bbb;">{{date format='YYYY-MM-DD'}}</p>
+          </a>
+        </li>
+      {{/foreach}}
+    </ul>
+  </div>
+  <div class="u-flex1" style="padding-left: 50px;">
+    <div class="u-flex" style="align-items: center;height: 40px;">
+      <h2 class="u-flex1" style="margin: 0;">官方微博 Weibo</h2>
+      <p style="margin: 0;">More >></p>
+    </div>
+    <iframe width="100%" height="550" class="share_self" frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&amp;width=0&amp;height=550&amp;;fansRow=2&amp;ptype=1&amp;speed=0&amp;skin=1&amp;isTitle=1&amp;noborder=1&amp;isWeibo=1&amp;isFans=0&amp;uid=2776718162&amp;verifier=43360bbf&amp;dpc=1"></iframe>
+  </div>
+</div>
+
+<ul class="bottomPhotoWall">
+  <li>
+    <a href="http://www.mymarianas.cn/index/content/sence_id/35.html">
+      <img src="http://www.mymarianas.cn/Public/images/banner/1531189256.jpg" alt="">
+    </a>
+  </li>
+  <li>
+    <a href="http://www.mymarianas.cn/index/content/sence_id/93.html">
+    <img src="http://www.mymarianas.cn/Public/images/banner/1531189260.jpg"
+        alt=""></a>
+  </li>
+  <li>
+    <a href="http://www.mymarianas.cn/index/content/sence_id/36.html">
+    <img src="http://www.mymarianas.cn/Public/images/banner/1531189264.jpg"
+        alt=""></a>
+  </li>
+  <li>
+    <a href="http://www.mymarianas.cn/index/content/sence_id/32.html">
+    <img src="http://www.mymarianas.cn/Public/images/banner/1531189271.jpg"
+        alt=""></a>
+  </li>
+  <li>
+    <a href="http://www.mymarianas.cn/index/content/sence_id/33.html">
+    <img src="http://www.mymarianas.cn/Public/images/banner/1531189279.jpg"
+        alt=""></a>
+  </li>
+  <li>
+    <a href="http://www.mymarianas.cn/index/content/sence_id/31.html">
+    <img src="http://www.mymarianas.cn/Public/images/banner/1531189284.jpg"
+        alt=""></a>
+  </li>
+  <li>
+    <a href="http://www.mymarianas.cn/index/content/sence_id/34.html">
+    <img src="http://www.mymarianas.cn/Public/images/banner/1531189291.jpg"
+        alt=""></a>
+  </li>
+  <li>
+    <a href="http://www.mymarianas.cn/index/content/sence_id/92.html">
+    <img src="http://www.mymarianas.cn/Public/images/banner/1531189296.jpg"
+        alt=""></a>
+  </li>
+</ul>
