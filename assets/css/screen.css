@@ -380,12 +380,14 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .nav li {
+    min-width: 110px;
     display: block;
     margin: 0;
     padding: 0;
 }
 
 .nav li a {
+    text-align: center;
     position: relative;
     display: block;
     padding: 30px 20px;
