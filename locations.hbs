@@ -1,0 +1,640 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{> site-header}}
+
+<style>
+#island{width: 100%;min-width: 1172px;margin-top: 7px;}
+#island .col-3{float: left;width: 33.33333%;}
+#island .col-3 a{display: block;}
+#island .col-3 a img{display: block;width: 100%;height: 100%;}
+.saiban{width: 100%;min-width: 1179px;background: #fff;}
+.saiban .title{width: 100%;min-width: 1179px;height: 87px;background: url("http://www.mymarianas.cn/Public/images/view/saiban-tit.jpg") no-repeat center;}
+.saiban .saibantu{background: url("http://www.mymarianas.cn/Public/images/view/saibantu.jpg") no-repeat  -28px 32px;height: 772px;position: relative;}
+.saiban .saibantu a{color: #727171;}
+.saiban .saibantu a h5{font-size: 16px;}
+.saiban .saibantu a span{font-size: 12px;letter-spacing: 1px;}
+.saiban .saibantu a img,.saiban .saibantu a p{display: none;}
+/*.saiban .saibantu a{text-align: right;}*/
+.saiban .saibantu a:nth-of-type(1){position: absolute;left: 609px;top: 35px;text-align: left;}
+.saiban .saibantu a:nth-of-type(2){position: absolute;left: 633px;top: 123px;text-align: left;}
+.saiban .saibantu a:nth-of-type(3){position: absolute;left: 572px;top: 169px;text-align: left;}
+.saiban .saibantu a:nth-of-type(4){position: absolute;left: 528px;top: 482px;text-align: left;}
+.saiban .saibantu a:nth-of-type(5){position: absolute;left: 363px;top: 520px;text-align: left;}
+.saiban .saibantu a:nth-of-type(6){position: absolute;left: 443px;top: 620px;text-align: left;}
+.saiban .saibantu a:nth-of-type(7){    position: absolute;
+    left: 376px;
+    top: 714px;
+    text-align: right;}
+.saiban .saibantu a:nth-of-type(8){position: absolute;left: 0px;top: 504px;text-align: right;}
+.saiban .saibantu a:nth-of-type(9){    position: absolute;
+    left: 25px;
+    top: 346px;
+    text-align: right;}
+.saiban .saibantu a:nth-of-type(10){    position: absolute;
+    left: 35px;
+    top: 223px;
+    text-align: right;}
+.saiban .saibantu a:nth-of-type(11){position: absolute;left: 97px;top: 166px;text-align: right;}
+.saiban .saibantu a:nth-of-type(16){position: absolute;
+    left: 91px;
+    top: 287px;
+    text-align: right;}
+.saiban .saibantu a:nth-of-type(14){    position: absolute;
+    left: 184px;
+    top: 696px;
+    text-align: right;}
+.saiban .saibantu a:nth-of-type(12){    position: absolute;
+    left: 89px;
+    top: 406px;
+    text-align: right;}
+.saiban .saibantu a:nth-of-type(15){position: absolute;
+    left: 483px;
+    top: 360px;
+    text-align: left;}
+.saiban .saibantu a:nth-of-type(13){    position: absolute;
+    left: 559px;
+    top: 227px;
+    text-align: left;}
+.saiban .saibantu a:nth-of-type(17){position: absolute;
+    left: 0;
+    top: 0;
+    text-align: left;}
+.saiban .saibantu a:hover,.saiban .saibantu a.active{color: #00b7eb;}
+.saiban .show{width: 363px;height: 482px;position: absolute;bottom: 32px;right: 32px;border: 1px solid #eee;padding: 2px;box-sizing: border-box;}
+.show img{ width: 100%; height: 100%; width: 363px;height: 482px; }
+.saiban_img{ width: 100%; height: 100%; width: 363px;height: 482px; }
+.saiban .show .star{width: 175px;border-bottom: 1px solid rgba(0,183,235,0.4);position: absolute;top: 26px;left: 20px;}
+.saiban .show .star h5{width: 165px;border-bottom: 2px solid #00b7eb;font-size: 14px;color: #fff;position: relative;bottom: -1px;padding-bottom: 10px;font-weight: normal;}
+.saiban .show .star h5 span{position: absolute;}
+.saiban .show .desc{width: 325px;height: auto;background: rgba(0,183,235,0.7);position: absolute;bottom: 20px;left: 19px;padding: 20px 10px 0;box-sizing: border-box;}
+.saiban .show .desc h1{font-size: 22px;color: #f2bb64;font-weight: normal;}
+.saiban .show .desc span{font-size: 16px;color: #fff;}
+.saiban .show .desc p{font-size: 12px;color: #1e1c1c;margin-top: 15px;}
+.saiban .show .desc a{display: block;width: 68px;height: 21px;border-radius: 3px;border: 1px solid #f2bb64;text-align: center;line-height: 21px;color: #fff;font-size: 12px;position: static;float: right;margin-top: 5px;margin-bottom: 10px;}
+.tianyu{width: 100%;min-width: 1172px;background: #fff;}
+.tianyu .title{width: 100%;min-width: 1179px;height: 87px;background: url("http://www.mymarianas.cn/Public/images/view/tianyu-tit.jpg") no-repeat center;}
+.tianyu .tianyutu{background: url("http://www.mymarianas.cn/Public/images/view/tianyutu.jpg") no-repeat 505px 20px;height: 772px;position: relative;}
+.tianyu .tianyutu a{color: #727171;}
+.tianyu .tianyutu a h5{font-size: 16px;}
+.tianyu .tianyutu a span{font-size: 12px;letter-spacing: 1px;}
+.tianyu .tianyutu a img,.tianyu .tianyutu a p{display: none;}
+/*.tianyu .tianyutu a{text-align: right;}*/
+.tianyu .tianyutu a:nth-of-type(1){position: absolute;right: 124px;top: 102px;text-align: left;}
+.tianyu .tianyutu a:nth-of-type(2){position: absolute;right: 22px;top: 249px;text-align: left;}
+.tianyu .tianyutu a:nth-of-type(3){position: absolute;right: 35px;top: 526px;text-align: left;}
+.tianyu .tianyutu a:nth-of-type(4){    position: absolute;
+    right: 340px;
+    top: 598px;
+    text-align: right;}
+.tianyu .tianyutu a:nth-of-type(9){position: absolute;right: 380px;top: 502px;text-align: right;}
+.tianyu .tianyutu a:nth-of-type(6){position: absolute;right: 520px;top: 310px;text-align: right;}
+.tianyu .tianyutu a:nth-of-type(5){position: absolute;right: 400px;top: 131px;text-align: right;}
+.tianyu .tianyutu a:nth-of-type(7){    position: absolute;
+    right: 347px;
+    top: 543px;
+    text-align: right;}
+.tianyu .tianyutu a:nth-of-type(8){    position: absolute;
+    right: 314px;
+    top: 655px;
+    text-align: right;}
+
+.tianyu .tianyutu a:hover,.tianyu .tianyutu a.active{color: #f16e52;}
+.zhi{ position: absolute; }
+.saibantu .zhi{ right: 163px; top: 127px; }
+.tianyutu .zhi{     top: 120px;
+    left: 172px; }
+ .luotatu .zhi   {    top: 737px;
+    left: 317px;}
+.tianyu .show{width: 363px;height: 482px;position: absolute;bottom: 32px;left: 30px;border: 1px solid #eee;padding: 2px;box-sizing: border-box;}
+.tianyu .show .star{width: 175px;border-bottom: 1px solid rgba(241,110,82,0.4);position: absolute;top: 26px;left: 20px;}
+.tianyu .show .star h5{width: 165px;border-bottom: 2px solid #f16e52;font-size: 14px;color: #fff;position: relative;bottom: -1px;padding-bottom: 10px;font-weight: normal;}
+.tianyu .show .star h5 span{position: absolute;right: 37px;}
+.tianyu .show .desc{width: 325px;height: auto;background: rgba(241,110,82,0.9);position: absolute;bottom: 20px;left: 19px;padding: 20px 10px 0;box-sizing: border-box;}
+.tianyu .show .desc h1{font-size: 22px;color: #fff;font-weight: normal;}
+.tianyu .show .desc span{font-size: 16px;color: #fff;}
+.tianyu .show .desc p{font-size: 12px;color: #fff;margin-top: 15px;}
+.tianyu .show .desc a{display: block;width: 68px;height: 21px;border-radius: 3px;border: 1px solid #f2bb64;text-align: center;line-height: 21px;color: #fff;font-size: 12px;position: static;float: right;margin-top: 5px;margin-bottom: 10px;}
+.luota{width: 100%;min-width: 1172px;background: #fff;}
+.luota .title{width: 100%;min-width: 1179px;height: 87px;background: url("http://www.mymarianas.cn/Public/images/view/luota-tit.jpg") no-repeat center;}
+.luota .luotatu{background: url("http://www.mymarianas.cn/Public/images/view/luotatu.jpg") no-repeat  -97px 42px;height: 934px;position: relative;     left: 196px;}
+.luota .luotatu a{color: #727171;}
+.luota .luotatu a h5{font-size: 16px;}
+.luota .luotatu a span{font-size: 12px;letter-spacing: 1px;}
+.luota .luotatu a img,.luota .luotatu a p{display: none;}
+/*.luota .luotatu a{text-align: right;}*/
+.luota .container{ overflow: hidden; }
+.luota .luotatu a:nth-of-type(1){position: absolute;left: 710px;top: 77px;text-align: left;}
+.luota .luotatu a:nth-of-type(2){position: absolute;left: 746px;top: 151px;text-align: left;}
+.luota .luotatu a:nth-of-type(3){    position: absolute;
+    left: 554px;
+    top: 348px;
+    text-align: right;}
+.luota .luotatu a:nth-of-type(4){    position: absolute;
+    left: 107px;
+    top: 534px;
+    text-align: left;}
+.luota .luotatu a:nth-of-type(5){        position: absolute;
+    left: -190px;
+    top: 447px;
+    text-align: right;}
+.luota .luotatu a:nth-of-type(6){    position: absolute;
+    left: 4px;
+    top: 337px;
+    text-align: right;}
+.luota .luotatu a:nth-of-type(7){    position: absolute;
+    left: 169px;
+    top: 220px;
+    text-align: right;}
+.luota .luotatu a:nth-of-type(8){    position: absolute;
+    left: 172px;
+    top: 170px;
+    text-align: right;}
+.luota .luotatu a:nth-of-type(9){    position: absolute;
+    left: 194px;
+    top: 126px;
+    text-align: right;}
+.luota .luotatu a:nth-of-type(10){    position: absolute;
+    left: 211px;
+    top: 71px;
+    text-align: right;}
+.luota .luotatu a:nth-of-type(16){    position: absolute;
+    left: -140px;
+    top: 502px;
+    text-align: right;}
+.luota .luotatu a:nth-of-type(11){    position: absolute;
+    left: -96px;
+    top: 392px;
+    text-align: right;}
+.luota .luotatu a:nth-of-type(12){ position: absolute;
+    left: 32px;
+    top: 269px;
+    text-align: right;}
+.luota .luotatu a:nth-of-type(13){     position: absolute;
+    left: 538px;
+    top: 16px;
+    text-align: right;}
+.luota .luotatu a:nth-of-type(14){      position: absolute;
+    left: 276px;
+    top: 589px;
+    text-align: right;}
+.luota .luotatu a:nth-of-type(15){    position: absolute;
+    left: -140px;
+    top: 561px;
+    text-align: right;}
+.luota .luotatu a:hover,.luota .luotatu a.active{color: #a9cf56;}
+.luota .show{    width: 363px;
+    height: 482px;
+    position: absolute;
+    bottom: 36px;
+    right: 224px;
+    border: 1px solid #eee;
+    padding: 2px;
+    box-sizing: border-box;}
+.luota .show .star{width: 175px;border-bottom: 1px solid rgba(169,207,86,0.4);position: absolute;top: 26px;left: 20px;}
+.luota .show .star h5{width: 165px;border-bottom: 2px solid #a9cf56;font-size: 14px;color: #fff;position: relative;bottom: -1px;padding-bottom: 10px;font-weight: normal;}
+.luota .show .star h5 span{position: absolute;right: 37px;}
+.luota .show .desc{width: 325px;height: auto;background: rgba(169,207,86,0.9);position: absolute;bottom: 20px;left: 19px;padding: 20px 10px 0;box-sizing: border-box;}
+.luota .show .desc h1{font-size: 22px;color: #fff;font-weight: normal;}
+.luota .show .desc span{font-size: 16px;color: #fff;}
+.luota .show .desc p{font-size: 12px;color: #727171;margin-top: 15px;}
+.luota .show .desc a{display: block;width: 68px;height: 21px;border-radius: 3px;border: 1px solid #f2bb64;text-align: center;line-height: 21px;color: #fff;font-size: 12px;position: static;float: right;margin-top: 5px;margin-bottom: 10px;}
+.tuijian{width: 100%;min-width: 1172px;background: #fff;}
+.tuijian .title{ margin-bottom: 50px; width: 100%;min-width: 1179px;height: 87px;background: url("http://www.mymarianas.cn/Public/assets/images/view/tuijian-tit.jpg") no-repeat center;}
+.tuijian li{ float: left; margin-right: 27px; margin-bottom: 20px; width: 274px; position: relative; height: 350px;  }
+.tuijian li img{ width: 100%; height: 100%; }
+.tuijian li .caption a{ font-size: 10px;  color: #fff; position: absolute; top: 17px; right: 25px; }
+.tuijian li .caption{ color: #fff; position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
+.tuijian li .caption .star{ color: #fbb002; right: 21px; position: absolute; bottom: 53px; }
+.tuijian li .caption h5{ padding-left: 22px; font-size: 15px; padding-top: 260px; }
+.tuijian li .caption span{ font-size: 13px;  padding-left: 22px;  padding-top: 5px; }
+.tuijian li .caption .desc{ padding: 8px 22px 0; font-size: 10px; }
+.tuijian li:nth-child(4n){ margin-right: 0; }
+.tuijian ul { margin: 0; padding: 0; list-style: none;}
+.tuijian ul h5 { margin: 0!important;}
+.tuijian ul li .desc { line-height: 1.2em!important;}
+a { text-decoration: none!important;}
+</style>
+
+<style>
+  .u-flex {
+    display: flex;
+  }
+
+  .u-flex1 {
+    flex: 1;
+  }
+
+  .u-flex-center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .u-width-full {
+    width: 100%;
+  }
+
+  p {
+    margin: 0;
+  }
+</style>
+
+<div class="inner u-flex">
+  <a href="#saiban-a" class="u-flex1" style="text-decoration:none!important;cursor:pointer;position:relative;">
+    <img class="u-width-full" src="http://www.mymarianas.cn/Public/images/banner/1531188257.jpg">
+    <div class="u-flex u-flex-center" style="position:absolute;left:0;bottom:20px;width:100%;">
+      <img src="http://www.mymarianas.cn/Public/assets/images/ddd.png" alt="">
+      <p style="font-size: 40px;font-weight:bold;color:white;">塞班岛</p>
+      <img src="http://www.mymarianas.cn/Public/assets/images/ccc.png" alt="">
+    </div>
+  </a>
+  <a href="#tianyu-a" class="u-flex1" style="text-decoration:none!important;cursor:pointer;position:relative;">
+    <img class="u-width-full" src="http://www.mymarianas.cn/Public/images/banner/1531188802.jpg">
+    <div class="u-flex u-flex-center" style="position:absolute;left:0;bottom:20px;width:100%;">
+      <img src="http://www.mymarianas.cn/Public/assets/images/ddd.png" alt="">
+      <p style="font-size: 40px;font-weight:bold;color:white;">天宁岛</p>
+      <img src="http://www.mymarianas.cn/Public/assets/images/ccc.png" alt="">
+    </div>
+  </a>
+  <a href="#luota-a" class="u-flex1" style="text-decoration:none!important;cursor:pointer;position:relative;">
+    <img class="u-width-full" src="http://www.mymarianas.cn/Public/images/banner/1531188296.jpg">
+    <div class="u-flex u-flex-center" style="position:absolute;left:0;bottom:20px;width:100%;">
+      <img src="http://www.mymarianas.cn/Public/assets/images/ddd.png" alt="">
+      <p style="font-size: 40px;font-weight:bold;color:white;">罗塔岛</p>
+      <img src="http://www.mymarianas.cn/Public/assets/images/ccc.png" alt="">
+    </div>
+  </a>
+  <a href="#hot-a" class="u-flex1" style="text-decoration:none!important;cursor:pointer;position:relative;">
+    <img class="u-width-full" src="http://www.mymarianas.cn/Public/images/banner/1531188594.jpg">
+    <div class="u-flex u-flex-center" style="position:absolute;left:0;bottom:20px;width:100%;">
+      <img src="http://www.mymarianas.cn/Public/assets/images/ddd.png" alt="">
+      <p style="font-size: 40px;font-weight:bold;color:white;">主题玩法</p>
+      <img src="http://www.mymarianas.cn/Public/assets/images/ccc.png" alt="">
+    </div>
+  </a>
+</div>
+
+<div class="inner u-flex u-flex-center" style="padding:70px 0;">
+  <img src="{{asset 'imgs/my.jpg'}}" alt="">
+</div>
+
+<div class="inner saiban" id="saiban-a">
+  <div class="title">
+  </div>
+  <div class="container">
+    <div class="saibantu">
+      <div class="zhi"><img src="http://www.mymarianas.cn/Public/assets/images/view/zhi.jpg" alt=""></div>
+      <a href="http://www.mymarianas.cn/index/content/sence_id/1.html" onmouseover="sence_get(1,1)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>万岁崖</h5><span>BANZAI CLIFF</span>
+      </a><a href="http://www.mymarianas.cn/index/content/sence_id/2.html" onmouseover="sence_get(1,2)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>蓝洞</h5><span>GROTTO</span>
+      </a><a href="http://www.mymarianas.cn/index/content/sence_id/3.html" onmouseover="sence_get(1,3)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>鸟岛观景台</h5><span>BIRD ISLAND LOOKOUT</span>
+      </a><a href="http://www.mymarianas.cn/index/content/sence_id/4.html" onmouseover="sence_get(1,4)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>禁断岛</h5><span>FORBIDDEN ISLAND</span>
+      </a><a href="http://www.mymarianas.cn/index/content/sence_id/5.html" onmouseover="sence_get(1,5)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>劳劳海滩</h5><span>LAULAU BEACH</span>
+      </a><a href="http://www.mymarianas.cn/index/content/sence_id/6.html" onmouseover="sence_get(1,6)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>塞班国际机场</h5><span>SAIPAN INTERNATIONAL AIRPORT</span>
+      </a><a href="http://www.mymarianas.cn/index/content/sence_id/7.html" onmouseover="sence_get(1,7)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>欧碧燕海滩</h5><span>OBYAN BEACH</span>
+      </a><a href="http://www.mymarianas.cn/index/content/sence_id/8.html" onmouseover="sence_get(1,8)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>卡梅尔山天主教大教堂</h5><span>Mt.Carmel Cathedral</span>
+      </a><a href="http://www.mymarianas.cn/index/content/sence_id/9.html" onmouseover="sence_get(1,9)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>塞班岛DFS环球免税店</h5><span>T Galleria DFS</span>
+      </a><a href="http://www.mymarianas.cn/index/content/sence_id/10.html" onmouseover="sence_get(1,10)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>美国纪念公园</h5><span>AMERICAN MEMORIAL PARK</span>
+      </a><a href="http://www.mymarianas.cn/index/content/sence_id/11.html" onmouseover="sence_get(1,12)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>军舰岛</h5><span>MANAGAHA ISLAND</span>
+      </a><a href="http://www.mymarianas.cn/index/content/sence_id/12.html" onmouseover="sence_get(1,12)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>踏破潮山</h5><span>Mt. Tapochao </span>
+      </a><a href="http://www.mymarianas.cn/index/content/sence_id/63.html" onmouseover="sence_get(1,63)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>鳄鱼嘴海滩</h5><span>San Juan Beach</span>
+      </a><a href="http://www.mymarianas.cn/index/content/sence_id/83.html" onmouseover="sence_get(1,83)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>拉德海滩</h5><span>Ladder Beach</span>
+      </a><a href="http://www.mymarianas.cn/index/content/sence_id/87.html" onmouseover="sence_get(1,87)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>坦克海滩</h5><span>Tank Beach</span>
+      </a><a href="http://www.mymarianas.cn/index/content/sence_id/97.html" onmouseover="sence_get(1,97)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>麦克海滩</h5><span>Micro Beach</span>
+      </a>
+      <div class="show">
+        <img class="saiban_img" src="http://www.mymarianas.cn/Public/images/news/1509432802.png" alt="">
+        <div class="star sb_star">
+          <h5>推荐指数：<span>★★★★★</span></h5>
+        </div>
+        <div class="desc sb">
+          <h1>塞班国际机场</h1>
+          <span>SAIPAN INTERNATIONAL AIRPORT</span>
+          <p>塞班国际机场北马里亚纳群岛上的一个公用机场，占地面积297公顷，只有1条跑道。</p>
+          <a href="/index.php/Home/Index/content/sence_id/6">更多信息</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="inner tianyu" id="tianyu-a" style="margin-top:50px;">
+  <div class="title"><!-- <img src="images/view/tianyu-tit.jpg" class="conwhole" alt=""> --></div>
+    <div class="container">
+      <div class="tianyutu">
+        <div class="zhi"><img src="http://www.mymarianas.cn/Public/assets/images/view/zhi.jpg" alt=""></div>
+        <a href="http://www.mymarianas.cn/index/content/sence_id/13.html" onmouseover="sence_get(2,13)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>喷洞</h5><span>Blow Hole</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/14.html" onmouseover="sence_get(2,14)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>长滩</h5><span>UnaiDankulo/Long Beach</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/15.html" onmouseover="sence_get(2,15)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>天宁神社</h5><span>Tinian Shrine</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/16.html" onmouseover="sence_get(2,16)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>塔加大宅</h5><span>House of Taga</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/19.html" onmouseover="sence_get(2,19)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>丘鲁海滩</h5><span>UniChulu (White Beach 2)</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/75.html" onmouseover="sence_get(2,75)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>天宁蓝洞</h5><span>Tinian Grotto</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/76.html" onmouseover="sence_get(2,76)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>卡莫海滩</h5><span>Kammer Beach</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/77.html" onmouseover="sence_get(2,77)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>塔加海滩</h5><span>Taga Beach</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/82.html" onmouseover="sence_get(2,82)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>天宁海滩</h5><span>Tinian Beach</span>
+        </a>                                   <div class="show">
+        <img class="tianyu_img" src="http://www.mymarianas.cn/Public/images/view/tianyu-show.jpg" alt="">
+        <div class="star ty_star"><h5>推荐指数：<span>★ ★ ★ ★</span></h5></div>
+        <div class="desc ty">
+        <h1>喷洞</h1>
+        <span>Blow Hole</span>
+        <p>喷洞位于天宁岛东南端，被列为世界五大奇景之一。</p>
+        <a href="http://www.mymarianas.cn/index/content/sence_id/13.html">更多信息</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="inner luota" id="luota-a" style="margin-top:50px;">
+  <div class="title"><!-- <img src="images/view/luota-tit.jpg" class="conwhole" alt=""> --></div>
+    <div class="container">
+      <div class="luotatu">
+        <div class="zhi"><img src="http://www.mymarianas.cn/Public/assets/images/view/zhi.jpg" alt=""></div>
+        <a href="http://www.mymarianas.cn/index/content/sence_id/20.html" onmouseover="sence_get(3,20)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>艾斯马特莫斯海角</h5><span>AS MATMOS</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/21.html" onmouseover="sence_get(3,21)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>拉提采石场，艾斯耐维斯</h5><span>Latte Stone Quarry,<br>As Neives</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/22.html" onmouseover="sence_get(3,22)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>鸟类保护区</h5><span>Bird Sanctuary</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/24.html" onmouseover="sence_get(3,24)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>罗塔岛动物园</h5><span>Rota Zoo</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/25.html" onmouseover="sence_get(3,25)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>日本糖厂/火车</h5><span>Japanese Sugar Mill / Train</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/26.html" onmouseover="sence_get(3,26)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>汤加洞穴</h5><span>Tonga Cave</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/27.html" onmouseover="sence_get(3,27)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>泰泰多海滩</h5><span>TETETO BEACH</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/28.html" onmouseover="sence_get(3,28)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>瓜塔海滩</h5><span>GUATA BEACH</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/29.html" onmouseover="sence_get(3,29)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>游泳洞</h5><span>SWIMMING HOLE</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/30.html" onmouseover="sence_get(3,30)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>罗塔乡村度假俱乐部</h5><span>ROTA RESORT &amp; COUNTRY CLUB</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/70.html" onmouseover="sence_get(3,70)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>宋宋村观景台</h5><span>Song Song Lookout</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/79.html" onmouseover="sence_get(3,79)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>老兵公园/海滩</h5><span>Veterans Park/Beach</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/80.html" onmouseover="sence_get(3,80)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>莫冲海滩</h5><span>Mochong Beach</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/81.html" onmouseover="sence_get(3,81)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>加加尼岬角</h5><span>Gagani Point</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/85.html" onmouseover="sence_get(3,85)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>特维克斯伯里海滩</h5><span>Tweksberry Beach</span>
+        </a><a href="http://www.mymarianas.cn/index/content/sence_id/86.html" onmouseover="sence_get(3,86)">
+        <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
+        <h5>西港</h5><span>West Harbor</span>
+        </a>                                     <div class="show">
+        <img class="luota_img" src="http://www.mymarianas.cn/Public/images/view/luota-show.jpg" alt="">
+        <div class="star lt_star"><h5>推荐指数：<span>★ ★ ★ ★</span></h5></div>
+        <div class="desc lt">
+        <h1>艾斯马特莫斯海角</h1>
+        <span>AS MATMOS</span>
+        <p>艾斯马特莫斯是是罗塔东侧的著名海角。</p>
+        <a href="http://www.mymarianas.cn/index/content/sence_id/20.html">更多信息</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="inner tuijian" id="hot-a">
+  <div class="title"></div>
+  <div class="list">
+    <div class="container">
+    <ul class="clearfix">
+      <li>
+      <a class="img" href="http://www.mymarianas.cn/index/content/sence_id/31.html"><img src="http://www.mymarianas.cn/Public/images/news/1531019117.jpg" alt=""></a>
+      <div class="caption">
+      <p class="star">★★★★★</p>
+      <!-- <h5>第0名 我的运动天堂</h5> -->
+      <h5> 我的运动天堂</h5>
+      <span></span>
+      <p class="desc">海陆空三栖玩转三岛；精彩赛事贯穿全年，独特视角探索马里亚纳；迎风挥杆，尽享高尔夫假期</p>
+      <a href="http://www.mymarianas.cn/index/content/sence_id/31.html">更多信息</a>
+      </div>
+      </li><li>
+      <a class="img" href="http://www.mymarianas.cn/index/content/sence_id/32.html"><img src="http://www.mymarianas.cn/Public/images/news/1531019227.jpg" alt=""></a>
+      <div class="caption">
+      <p class="star">★★★★★</p>
+      <!-- <h5>第0名 我的自驾胜地</h5> -->
+      <h5> 我的自驾胜地</h5>
+      <span></span>
+      <p class="desc">中国驾照认可；便捷机场提车还车；多种路线选择满足游客多样需求</p>
+      <a href="http://www.mymarianas.cn/index/content/sence_id/32.html">更多信息</a>
+      </div>
+      </li><li>
+      <a class="img" href="http://www.mymarianas.cn/index/content/sence_id/33.html"><img src="http://www.mymarianas.cn/Public/images/news/1531019317.jpg" alt=""></a>
+      <div class="caption">
+      <p class="star">★★★★★</p>
+      <!-- <h5>第0名 我们的婚礼&蜜月纪念地</h5> -->
+      <h5> 我们的婚礼&amp;蜜月纪念地</h5>
+      <span></span>
+      <p class="desc">特色婚拍——阳光下牵手，海浪边漫步，看日升日落，数漫天繁星；海滨婚礼——面朝大海，许下诺言……</p>
+      <a href="http://www.mymarianas.cn/index/content/sence_id/33.html">更多信息</a>
+      </div>
+      </li><li>
+      <a class="img" href="http://www.mymarianas.cn/index/content/sence_id/34.html"><img src="http://www.mymarianas.cn/Public/images/news/1531018969.jpg" alt=""></a>
+      <div class="caption">
+      <p class="star">★★★★★</p>
+      <!-- <h5>第0名 我的美食天堂</h5> -->
+      <h5> 我的美食天堂</h5>
+      <span></span>
+      <p class="desc">世界风味——美国、中国、日本、韩国、泰国、墨西哥、尼泊尔、越南、意大利……全球风味一网打尽……</p>
+      <a href="http://www.mymarianas.cn/index/content/sence_id/34.html">更多信息</a>
+      </div>
+      </li><li>
+      <a class="img" href="http://www.mymarianas.cn/index/content/sence_id/35.html"><img src="http://www.mymarianas.cn/Public/images/news/1531018854.jpg" alt=""></a>
+      <div class="caption">
+      <p class="star">★★★★★</p>
+      <!-- <h5>第0名 我的海洋秘境</h5> -->
+      <h5> 我的海洋秘境</h5>
+      <span></span>
+      <p class="desc">一睹七色宝石般绚烂的壮丽海景；缤纷水上活动感受大海的无限活力；探索神秘海底秘境</p>
+      <a href="http://www.mymarianas.cn/index/content/sence_id/35.html">更多信息</a>
+      </div>
+      </li><li>
+      <a class="img" href="http://www.mymarianas.cn/index/content/sence_id/36.html"><img src="http://www.mymarianas.cn/Public/images/news/1531018666.jpg" alt=""></a>
+      <div class="caption">
+      <p class="star">★★★★★</p>
+      <!-- <h5>第0名 我的人文天堂</h5> -->
+      <h5> 我的人文天堂</h5>
+      <span></span>
+      <p class="desc">千百年岛屿文化传承；东西方多元文化交融；探索精彩纷呈的异域节日</p>
+      <a href="http://www.mymarianas.cn/index/content/sence_id/36.html">更多信息</a>
+      </div>
+      </li><li>
+      <a class="img" href="http://www.mymarianas.cn/index/content/sence_id/92.html"><img src="http://www.mymarianas.cn/Public/images/news/1531019458.jpg" alt=""></a>
+      <div class="caption">
+      <p class="star">★★★★★</p>
+      <!-- <h5>第0名 我的全家乐园</h5> -->
+      <h5> 我的全家乐园</h5>
+      <span></span>
+      <p class="desc">精彩演出——亲子互动的最好舞台；探寻历史、认识自然——寓教于乐的最佳选择；天然海滩、水上乐……</p>
+      <a href="http://www.mymarianas.cn/index/content/sence_id/92.html">更多信息</a>
+      </div>
+      </li><li>
+      <a class="img" href="http://www.mymarianas.cn/index/content/sence_id/93.html"><img src="http://www.mymarianas.cn/Public/images/news/1531019526.jpg" alt=""></a>
+      <div class="caption">
+      <p class="star">★★★★★</p>
+      <!-- <h5>第0名 我的原生态秘境</h5> -->
+      <h5> 我的原生态秘境</h5>
+      <span></span>
+      <p class="desc">凤凰花开——如火焰一般盛开的凤凰花，映入眼帘，赏心悦目；原始密林——热带雨林物种多样	；鸟……</p>
+      <a href="http://www.mymarianas.cn/index/content/sence_id/93.html">更多信息</a>
+      </div>
+      </li>
+    </ul>
+    </div>
+  </div>
+</div>
+<br><br>
+
+{{#contentFor "scripts"}}
+<script>
+  var database = {
+    1: {
+      1: { title: '万岁崖', en_title: 'BANZAI CLIFF', remark: '', img: 'http://www.mymarianas.cn/Public/images/news/1488073222.jpg' },
+      2: { title: '蓝洞', en_title: 'GROTTO', remark: '蓝洞位于塞班岛的东北角，是与太平洋相连的天然洞穴，被《潜水人》杂志评为世界第二的洞穴潜水点。', img: 'http://www.mymarianas.cn/Public/images/news/1487925716.jpg' },
+      3: { title: '鸟岛观景台', en_title: 'BIRD ISLAND LOOKOUT', remark: '鸟岛，位于塞班岛北部，由石灰岩构成，因栖息众多的鸟类而得名。', img: 'http://www.mymarianas.cn/Public/images/news/1530861973.jpg' },
+      4: { title: '禁断岛', en_title: 'FORBIDDEN ISLAND', remark: '禁断岛位于塞班岛的东南面,是一个半离岛,潮水高涨时禁断岛与塞班岛是分开的，退潮时仍有部门相连。', img: 'http://www.mymarianas.cn/Public/images/news/1488114819.jpg' },
+      5: { title: '劳劳海滩', en_title: 'LAULAU BEACH', remark: '劳劳海滩是最受潜水者欢迎的潜水点，它不仅拥有平坦的沙滩，还有着岛上最大的暗礁。', img: 'http://www.mymarianas.cn/Public/images/news/1509445527.png' },
+      6: { title: '塞班国际机场', en_title: 'SAIPAN INTERNATIONAL AIRPORT', remark: '塞班国际机场北马里亚纳群岛上的一个公用机场，占地面积297公顷，只有1条跑道。', img: 'http://www.mymarianas.cn/Public/images/news/1509432802.png' },
+      7: { title: '欧碧燕海滩', en_title: 'OBYAN BEACH', remark: '欧碧燕海滩是一片宽敞坦荡的粗砂海滩，与天宁岛隔海相望，同时也是塞班最好的潜水练习场之一。', img: 'http://www.mymarianas.cn/Public/images/news/1488116576.jpg' },
+      8: { title: '卡梅尔山天主教大教堂', en_title: 'Mt.Carmel Cathedral', remark: '大教堂于1945年第二次世界大战之后建立，是塞班岛居民们的精神支柱。', img: 'http://www.mymarianas.cn/Public/images/news/1488117077.jpg' },
+      9: { title: '塞班岛DFS环球免税店', en_title: "T Galleria DFS", remark: '塞班最大的购物中心，来自世界的名牌应有尽有。', img: 'http://www.mymarianas.cn/Public/images/news/1531016643.jpg' },
+      10: { title: '美国纪念公园', en_title: 'AMERICAN MEMORIAL PARK', remark: '美国纪念公园于1994年建成，是一个为了纪念在第二次世界大战中牺牲的塞班岛军人的大型公园。', img: 'http://www.mymarianas.cn/Public/images/news/1531016591.jpg' },
+      11: { title: '军舰岛', en_title: 'MANAGAHA ISLAND', remark: '军舰岛位于塞班岛的西侧，坐船10分钟就可以到达，是塞班旅游的必去景点。', img: 'http://www.mymarianas.cn/Public/images/news/1488117972.jpg' },
+      12: { title: '踏破潮山', en_title: 'Mt. Tapochao    ', remark: '踏破潮山是塞班的最高点，海拔475米。', img: 'http://www.mymarianas.cn/Public/images/news/1531016329.jpg' },
+      63: { title: '鳄鱼嘴海滩', en_title: 'San Juan Beach', remark: '鳄鱼嘴海滩位于塞班东岸。沿着小路穿越层层密林，就会来到这片山石环绕的海滩。', img: 'http://www.mymarianas.cn/Public/images/news/1531016507.jpg' },
+      83: { title: '拉德海滩', en_title: 'Ladder Beach', remark: '拉德海滩是一片藏身在悬崖之中的海滩，以悬崖下的天然洞窟而闻名。', img: 'http://www.mymarianas.cn/Public/images/news/1531027536.jpg' },
+      87: { title: '坦克海滩', en_title: 'Tank Beach', remark: '坦克海滩位于塞班东南部，这片海滩常年直面太平洋的汹涌海浪，因此不适合进行水下运动。', img: 'http://www.mymarianas.cn/Public/images/news/1530848335.jpg' },
+      97: { title: '麦克海滩', en_title: 'Micro Beach', remark: '麦克海滩是塞班最受欢迎的海滩之一。', img: 'http://www.mymarianas.cn/Public/images/news/1531189502.jpg' },
+    },
+    2: {
+      13: { title: '喷洞', en_title: 'Blow Hole', remark: '喷洞位于天宁岛东南端，被列为世界五大奇景之一。', img: 'http://www.mymarianas.cn/Public/images/news/1513688957.png' },
+      14: { title: '长滩', en_title: 'UnaiDankulo/Long Beach', remark: '', img: 'http://www.mymarianas.cn/Public/images/news/1509434590.png' },
+      15: { title: '天宁神社', en_title: 'Tinian Shrine', remark: '天宁岛曾经被日本人统治过，因此有着日本特有的神社。', img: 'http://www.mymarianas.cn/Public/images/news/1488192614.jpg' },
+      16: { title: '塔加大宅', en_title: 'House of Taga', remark: '塔加屋（ House ofTaga）位于天宁岛南部，是天宁岛原住民的特有石屋建筑，已经有3500年的历史。', img: 'http://www.mymarianas.cn/Public/images/news/1488191302.jpg' },
+      19: { title: '丘鲁海滩', en_title: 'UniChulu (White Beach 2)', remark: '丘鲁海滩位于天宁岛南端的西北部，是一个非常浪漫的沙滩。', img: 'http://www.mymarianas.cn/Public/images/news/1502961196.jpg' },
+      75: { title: '天宁蓝洞', en_title: 'Tinian Grotto', remark: '天宁蓝洞', img: 'http://www.mymarianas.cn/Public/images/news/1528886070.jpg' },
+      76: { title: '卡莫海滩', en_title: 'Kammer Beach', remark: '卡莫海滩是位于圣何塞镇和塔加海滩之间的一片小沙滩，突出海面的沉船造成了独特的风景。这也是潜水爱好者探索沉船的最佳地点。 有淋浴和烧烤架，使其成为当地人聚会的场所。​', img: 'http://www.mymarianas.cn/Public/images/news/1528886145.jpg' },
+      77: { title: '塔加海滩', en_title: 'Taga Beach', remark: '塔加海滩位于天宁岛西南部，是天宁最知名的海滩。这片细致幽静的海滩从悬崖中延伸而出，白沙滩外是碧绿澄澈的宁静大海。相传，这里是古代查莫洛王族专用的海水浴场。这片海湾干净澄澈又风平浪静，非常适合水上活动。日落时分，当地小孩会在此嬉戏玩耍，因此塔加海滩也是感受民风、欣赏落日的好去处。', img: 'http://www.mymarianas.cn/Public/images/news/1528886289.jpg' },
+      82: { title: '天宁海滩', en_title: 'Tinian Beach', remark: '天宁海滩位于天宁岛西南部', img: 'http://www.mymarianas.cn/Public/images/news/1528947217.jpg' },
+    },
+    3: {
+      20: { title: '艾斯马特莫斯海角', en_title: 'AS MATMOS', remark: '艾斯马特莫斯是是罗塔东侧的著名海角。', img: 'http://www.mymarianas.cn/Public/images/news/1513689379.png' },
+      21: { title: '拉提采石场，艾斯耐维斯', en_title: 'Latte Stone Quarry,<br>As Neives', remark: '在罗塔岛机场的北面是Taga石场，游客在那里能发现古代查莫罗人是如何将石灰岩切割成巨大的拉提石。', img: 'http://www.mymarianas.cn/Public/images/news/1513689599.png' },
+      22: { title: '鸟类保护区', en_title: 'Bird Sanctuary', remark: '岛上的鸟类保护区有数千只海鸟在此筑巢。', img: 'http://www.mymarianas.cn/Public/images/news/1488234099.jpg' },
+      24: { title: '罗塔岛动物园', en_title: 'Rota Zoo', remark: '罗塔动物园位于岛的西南侧，是一个私人经营的小动物园。', img: 'http://www.mymarianas.cn/Public/images/news/1488234739.jpg' },
+      25: { title: '日本糖厂/火车', en_title: 'Japanese Sugar Mill / Train', remark: '砖红色的糖厂说得上是罗塔的一道独特风景。', img: 'http://www.mymarianas.cn/Public/images/news/1502963685.jpg' },
+      26: { title: '汤加洞穴', en_title: 'Tonga Cave', remark: '汤加洞穴是位于宋宋村北部山麓中的钟乳石洞穴。过去曾有横渡重洋来罗塔定居的汤加人居住于此，因而得名。在台风肆虐的季节，这个洞穴也是一个天然的庇护所。在日本占领时代，这里还一度被开发成野战医院使用。', img: 'http://www.mymarianas.cn/Public/images/news/1528873371.jpg' },
+      27: { title: '泰泰多海滩', en_title: 'TETETO BEACH', remark: '这里是当地人钟爱的休憩胜地。', img: 'http://www.mymarianas.cn/Public/images/news/1513689445.png' },
+      28: { title: '瓜塔海滩', en_title: 'GUATA BEACH', remark: '', img: 'http://www.mymarianas.cn/Public/images/news/1502963168.jpg' },
+      29: { title: '游泳洞', en_title: 'SWIMMING HOLE', remark: '于罗塔岛的北边，是由一圈珊瑚礁围绕成的天然海水浴场，在这里你可以放松身心畅游在清澈晶莹的海水之中。', img: 'http://www.mymarianas.cn/Public/images/news/1502963412.jpg' },
+      30: { title: '罗塔乡村度假俱乐部', en_title: 'ROTA RESORT & COUNTRY CLUB', remark: '罗塔度假乡村俱乐部是一座拥有世界级18洞高尔夫球场的豪华度假村。', img: 'http://www.mymarianas.cn/Public/images/news/1488235704.jpg' },
+      70: { title: '宋宋村观景台', en_title: 'Song Song Lookout', remark: '宋宋村观景台位于宋宋村北部的山腰上，左邻太平洋，右邻菲律宾海，鸟瞰宋宋村全景，还能将远处的婚礼蛋糕山尽收眼底，是罗塔最具代表性的观景台。', img: 'http://www.mymarianas.cn/Public/images/news/1528873752.jpg' },
+      79: { title: '老兵公园/海滩', en_title: 'Veterans Park/Beach', remark: '老兵海滩是一个浅海干净的小海滩。海滩和海面上方的巨大岩石以及从浅到深的平坦穿孔岩石创造了一个有趣的景观。由于它们的外观，平坦的岩石被称为“蘑菇岩”。', img: 'http://www.mymarianas.cn/Public/images/news/1531017809.jpg' },
+      80: { title: '莫冲海滩', en_title: 'Mochong Beach', remark: '莫冲海滩位于罗塔度假村北侧，无尽的白色沙滩通过棕榈树丛林延伸而出。如果你正在寻找你自己的私人秘密海滩，这里是最好的。', img: 'http://www.mymarianas.cn/Public/images/news/1531017842.jpg' },
+      81: { title: '加加尼岬角', en_title: 'Gagani Point', remark: '这里不仅有美丽的海景，也是年度捕鱼大赛地点。', img: 'http://www.mymarianas.cn/Public/images/news/1531017868.jpg' },
+      85: { title: '特维克斯伯里海滩', en_title: 'Tweksberry Beach', remark: '特维克斯伯里海滩位于罗塔西南角的千椰林旁，这片海滩由不远处的礁石层层包围，因此太平洋的风浪从来都不会打破这里的恬静。半身深的浅海泛着乳白色的光芒，与千椰林的绰约树影交相辉映。', img: 'http://www.mymarianas.cn/Public/images/news/1529377809.jpg' },
+      86: { title: '西港', en_title: 'West Harbor', remark: '西港位于千椰林旁边，是一片风平浪静的民用港湾。这里大概将是你见过的海水最碧绿清澈的海港，走在海堤上可以清晰地看到鲜艳的热带鱼在船只下游动。', img: 'http://www.mymarianas.cn/Public/images/news/1529377877.jpg' },
+    }
+  };
+
+  function sence_get(typeid, id) {
+    level_text = '★★★★★'
+    var data = database[typeid][id]
+    if(typeid == 1){
+      $(".sb h1").html(data.title);
+      $(".sb span").html(data.en_title);
+      $(".sb p").html(data.remark);
+      $(".sb a").attr('href', '/locations/' + id);
+      $(".sb_star span").html(level_text);
+      $(".saiban_img").attr('src', data.img);
+    }
+    if(typeid == 2){
+      $(".ty h1").html(data.title);
+      $(".ty span").html(data.en_title);
+      $(".ty p").html(data.remark);
+      $(".ty a").attr('href', '/locations/' + id);
+      $(".ty_star span").html(level_text);
+      $(".tianyu_img").attr('src',data.img);
+    }
+    if(typeid == 3){
+      $(".lt h1").html(data.title);
+      $(".lt span").html(data.en_title);
+      $(".lt span").html(data.en_title);
+      $(".lt p").html(data.remark);
+      $(".lt a").attr('href', '/locations/' + id);
+      $(".lt_star span").html(level_text);
+      $(".luota_img").attr('src',data.img);
+    }
+  }
+</script>
+{{/contentFor}}
