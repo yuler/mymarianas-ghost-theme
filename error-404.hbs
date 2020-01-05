@@ -19,12 +19,12 @@ into the {body} of the default.hbs template --}}
             <a class="error-link" href="{{@site.url}}">Go to the front page →</a>
         </section>
 
-        {{#get "posts" limit="3" include="authors,tags"}}
+        {{!-- {{#get "posts" limit="3" include="authors,tags"}}
             <div class="post-feed">
                 {{#foreach posts}}
                 {{> "post-card"}}
                 {{/foreach}}
             </div>
-        {{/get}}
+        {{/get}} --}}
     </div>
 </main>
