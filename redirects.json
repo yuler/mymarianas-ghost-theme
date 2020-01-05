@@ -1,0 +1,7 @@
+[
+  {
+    "from": "/(\\d+).html",
+    "to": "/$1/",
+    "permanent": false
+  }
+]
