@@ -95,6 +95,7 @@ into the {body} of the default.hbs template --}}
 
         var imgs = $('.kg-gallery-container img').map(function(){return $(this).attr('src')}).get();
 
+        if (!imgs.length) return
         var html = '' +
             '<div class="swiper-container gallery-top">' + 
                 '<div class="swiper-wrapper">' + 

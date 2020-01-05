@@ -10,6 +10,36 @@ into the {body} of the default.hbs template --}}
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
 
+<style>
+    .swiper-container {
+      width: 100%;
+      height: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+    }
+    .gallery-top {
+      height: 786px;
+      width: 100%;
+    }
+    .gallery-thumbs {
+      height: 200px;
+      box-sizing: border-box;
+      padding: 10px 0;
+    }
+    .gallery-thumbs .swiper-slide {
+      width: 25%;
+      height: 100%;
+      opacity: 0.4;
+    }
+    .gallery-thumbs .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+</style>
+
 <main id="site-main" class="site-main outer">
     <div class="inner">
 
@@ -209,6 +239,58 @@ into the {body} of the default.hbs template --}}
                 $this.children('.author-card').removeClass('hovered');
             }, 800);
         });
+
+        // Swiper
+        $(function() {
+
+            var imgs = $('.kg-gallery-container img').map(function(){return $(this).attr('src')}).get();
+
+            if (!imgs.length) return
+            var html = '' +
+                '<div class="swiper-container gallery-top">' + 
+                    '<div class="swiper-wrapper">' + 
+                    imgs.map(function(img) {
+                        return '<div class="swiper-slide" style="background-image:url(' + img + ')"></div>'
+                    }).join('') + 
+                    '</div>' +
+                    '<div class="swiper-button-next swiper-button-white"></div>' + 
+                    '<div class="swiper-button-prev swiper-button-white"></div>' + 
+                '</div>' +
+                '<div class="swiper-container gallery-thumbs">' + 
+                    '<div class="swiper-wrapper">' + 
+                    imgs.map(function(img) {
+                        return '<div class="swiper-slide" style="background-image:url(' + img + ')"></div>'
+                    }).join('') + 
+                    '</div>' +
+                '</div>'
+            
+            $('article').before(html)
+            $('.kg-gallery-card').hide()
+
+            setTimeout(function() {
+                var galleryThumbs = new Swiper('.gallery-thumbs', {
+                    spaceBetween: 10,
+                    slidesPerView: 4,
+                    freeMode: true,
+                    watchSlidesVisibility: true,
+                    watchSlidesProgress: true,
+                });
+                var galleryTop = new Swiper('.gallery-top', {
+                    spaceBetween: 10,
+                    centeredSlides: true, 
+                    slidesPerView: 'auto',
+                    touchRatio: 0.2,
+                    slideToClickedSlide: true,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    thumbs: {
+                        swiper: galleryThumbs
+                    }
+                });
+            }, 500)
+        })
     });
 </script>
 {{/contentFor}}
