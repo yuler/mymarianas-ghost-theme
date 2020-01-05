@@ -19,6 +19,9 @@
         .swiper-container {
             width: 100%;
         }
+        .swiper-button-white {
+            color: white;
+        }
 
         /* footer styles */
         .clearfix::after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
@@ -145,44 +148,6 @@
         // Give the parameter a variable name
         var action = getParameterByName('action');
 
-        $(document).ready(function () {
-            if (action == 'subscribe') {
-                $('body').addClass("subscribe-success");
-            }
-
-            $('.subscribe-success-message .subscribe-close').click(function () {
-                $('.subscribe-success-message').addClass('close');
-            });
-
-            // Reset form on opening subscrion overlay
-            $('.subscribe-button').click(function() {
-                $('.subscribe-overlay form').removeClass();
-                $('.subscribe-email').val('');
-            });
-
-            // Init Swiper
-            var mySwiper = new Swiper('.swiper-container', {
-                // Optional parameters
-                loop: true,
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-                // If we need pagination
-                pagination: {
-                  el: '.swiper-pagination',
-                },
-                // Navigation arrows
-                navigation: {
-                  nextEl: '.swiper-button-next',
-                  prevEl: '.swiper-button-prev',
-                },
-                // And if we need scrollbar
-                scrollbar: {
-                  el: '.swiper-scrollbar',
-                },
-            })
-        });
     </script>
 
     {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}

@@ -4,6 +4,7 @@ routes:
     template: index
   /locations/: locations
   /calendar/: calendar
+  /community/: community
 
 collections:
   /:
