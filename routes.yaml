@@ -3,6 +3,7 @@ routes:
     data: page.home
     template: index
   /locations/: locations
+  /calendar/: calendar
 
 collections:
   /:
