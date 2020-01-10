@@ -2,8 +2,7 @@ name: Deploy Theme
 on:
   push: 
     branches:
-      - dev
-      # - master
+      - master
 jobs:
   deploy:
     runs-on: ubuntu-18.04
@@ -13,11 +12,9 @@ jobs:
         with:
           node-version: '10.x'
       - run: npm install
-      - run: npm run build          
+      - run: npm run zip
       - name: Deploy Ghost Theme
-        uses: TryGhost/action-deploy-theme@master
-        with:
-          api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
-          api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
-          theme-name: custom
-          exclude: '*node_modules/*'
+        env:
+          API_URL: ${{ secrets.GHOST_ADMIN_API_URL }}
+          API_KEY: ${{ secrets.GHOST_ADMIN_API_KEY }}
+        run: ./upload-theme.sh
