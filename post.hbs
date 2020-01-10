@@ -61,7 +61,7 @@ into the {body} of the default.hbs template --}}
                 <p class="post-full-custom-excerpt">{{custom_excerpt}}</p>
                 {{/if}}
 
-                <div class="post-full-byline">
+                {{!-- <div class="post-full-byline">
 
                     <section class="post-full-byline-content">
 
@@ -112,7 +112,7 @@ into the {body} of the default.hbs template --}}
                     </section>
 
 
-                </div>
+                </div> --}}
             </header>
 
             {{#if feature_image}}
@@ -156,7 +156,7 @@ into the {body} of the default.hbs template --}}
 </main>
 
 {{!-- Links to Previous/Next posts --}}
-<aside class="read-next outer">
+{{!-- <aside class="read-next outer">
     <div class="inner">
         <div class="read-next-feed">
             {{#if primary_tag}}
@@ -201,7 +201,7 @@ into the {body} of the default.hbs template --}}
             {{/prev_post}}
         </div>
     </div>
-</aside>
+</aside> --}}
 
 {{/post}}
 
@@ -243,7 +243,7 @@ into the {body} of the default.hbs template --}}
         // Swiper
         $(function() {
 
-            var imgs = $('.kg-gallery-container img').map(function(){return $(this).attr('src')}).get();
+            var imgs = $('.kg-gallery-container').first.find('img').map(function(){return $(this).attr('src')}).get();
 
             if (!imgs.length) return
             var html = '' +

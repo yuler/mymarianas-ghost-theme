@@ -93,7 +93,7 @@ into the {body} of the default.hbs template --}}
 
     $(function() {
 
-        var imgs = $('.kg-gallery-container img').map(function(){return $(this).attr('src')}).get();
+        var imgs = $('.kg-gallery-container').first.find('img').map(function(){return $(this).attr('src')}).get();
 
         if (!imgs.length) return
         var html = '' +
