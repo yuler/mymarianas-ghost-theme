@@ -93,7 +93,11 @@ into the {body} of the default.hbs template --}}
 
     $(function() {
 
-        var imgs = $('.kg-gallery-container').first.find('img').map(function(){return $(this).attr('src')}).get();
+        var imgs = $('.kg-gallery-container')
+            .first()
+            .find('img')
+            .map(function(){return $(this).attr('src')})
+            .get();
 
         if (!imgs.length) return
         var html = '' +
@@ -115,7 +119,7 @@ into the {body} of the default.hbs template --}}
             '</div>'
         
         $('article').before(html)
-        $('.kg-gallery-card').hide()
+        $('.kg-gallery-card').first().hide()
 
         setTimeout(function() {
             var galleryThumbs = new Swiper('.gallery-thumbs', {
