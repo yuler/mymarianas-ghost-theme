@@ -5,6 +5,7 @@ routes:
   /locations/: locations
   /calendar/: calendar
   /community/: community
+  /activity/: activity
 
 collections:
   /:
