@@ -5,11 +5,180 @@ into the {body} of the default.hbs template --}}
 {{> site-header}}
 
 <style>
+.search button:after{ position: absolute; content: ""; top: 0px; right: 0px; width: 22px; height: 22px; color:#000;background: url(../images/search.png); }
+.banner{ width: 100%; height: 680px; min-width: 1180px; }
+.head .language{ color: #000; }
+.language{ cursor: pointer; position: relative; font-size: 16px; float: left; color: #fff; line-height: 78px; margin-left: 40px; }
+.language:after{ position: absolute; width: 10px; height: 6px; top: 37px; right: -12px; content: ""; background: url(../images/bottom.png); }
+.head .language:after{ background: url(../images/bottom-h.png); background-size: 100% 100%; }
+
+.banner .swiper-button-prev{ background-size: 100% 100%; margin-left: -590px; width: 30px; height: 30px; position: absolute; left: 50%; background-image: url(../images/left.png); }
+.banner .swiper-button-next{ width: 30px; height: 30px; margin-left: 590px;  background-size: 100% 100%; position: absolute; left: 50%; background-image: url(../images/right.png); }
+.banner .swiper-pagination span.swiper-pagination-bullet{ width: 10px; height: 10px; background-color: #fff;}
+.language.hover .er-nav{ padding: 15px 0; display: block; background:  rgba(255,255,255,0.8); }
+.xbanner{ width: 100%; background: #313131; }
+.xbanner .b-img{ width: 100%; overflow: hidden; position: relative; height: 360px; }
+.xbanner .b-img img{position: absolute; left: 50%; transform: translate(-50%,0);}
+.swiper-slide img{ width: 100%; height: 100%;  }
+.wrap{ width: 1180px; margin: 0 auto; }
+.ours{ text-align: center; padding: 33px 0; }
+.jingdian li{ float: left; position: relative; }
+.jingdian li{ width: 396px; height: 801px;  }
+.jingdian li img{ width: 100%; height: 100%; }
+.jingdian .jd1,.jingdian .jd3{ margin-top: 48px; width: 390px; height: 600px; }
+.jingdian span{ width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+.jingdian .jd1 span{ background: url(../images/tinning-bg.png); }
+.jingdian .jd2 span{ background: url(../images/saiban-bg.png); }
+.jingdian .jd3 span{ background: url(../images/luota-bg.png); }
+.gonglue{}
+.gonglue h3{ padding: 40px 0 20px 0; font-size: 25px; }
+.gonglue h3 span{ font-size: 16px;  padding-left: 10px;}
+.gonglue .gl-list{ background: url(../images/gl0.png); width: 100%; height: 900px; }
+.gonglue .gl-list .gl1{ padding-left: 338px; }
+.gonglue .gl-list .gl2{ padding: 180px 0 0 401px; }
+.gonglue .gl-list .gl3{  }
+.gonglue .gl-list .gl4{ padding-left: 718px; }
+.gonglue .gl-list li a,.gonglue .gl-list li a img{ display: block; }
+.sy-news{ margin-top: 70px; }
+.sy-news h3{ font-size: 25px; }
+.sy-news h3 span{ padding-left: 10px; font-size: 16px; }
+.sy-news h3 .more{ font-size: 12px; float: right; padding-top: 15px; padding-right: 15px; }
+.new-left{ float: left; width: 565px; height: 535px; border-right: solid 1px #e0e3e8; }
+.new-right{ float: right;width:500px; }
+.new-left ul{ margin-top: 40px; }
+.new-left li{padding: 12px 0; font-size: 16px; width: 525px; padding-left: 15px; height: 20px; }
+.new-left li span{ display: inline-block; vertical-align: middle; width: 20px; height: 20px; background: #0283ad; font-size: 14px; text-align: center; line-height: 20px; color: #fff; }
+.new-left li p{  display: inline-block; font-size: 16px; vertical-align: middle; padding-left: 12px; width: 425px; }
+.new-left li i{ display: inline-block; font-style: normal; font-size: 12px; color: #8e8e8e; vertical-align: middle; }
+.new-right .weibo{ margin-top: 19px; }
+.jd-list li a,.hd-list li a,.dt-list li a,.jd-list li a{ position: relative; display: block; }
+.jd-list li{ height: 680px; width: 284px; float: left; position: relative; overflow: hidden }
+.hd-list li{ height: 680px; width: 393px; float: left; position: relative; overflow: hidden }
+.dt-list li{ float: left; width: 393px; height: 680px; position: relative; overflow: hidden }
+.dtt-list li{ float: left; width: 585px; height: 680px; position: relative; overflow: hidden }
+.dtt-list li img,.dt-list li img,.hd-list li img,.jd-list li img{ width: 100%; height: 100%; }
+.dtt-list .wenzi{ text-align: left; font-size: 28px; text-indent: 30px; }
+.hudong li{ margin-bottom: 30px; }
+.dongtai ul{ margin-top: 20px; }
+.dongtai li{padding: 12px 0; font-size: 16px; width: 1160px; padding-left: 15px; height: 20px; }
+.dongtai li span{ display: inline-block; vertical-align: middle; width: 20px; height: 20px; background: #0283ad; font-size: 14px; text-align: center; line-height: 20px; color: #fff; }
+.dongtai li p{  display: inline-block; font-size: 16px; vertical-align: middle; padding-left: 12px; width: 1040px; }
+.dongtai li i{ display: inline-block; font-style: normal; font-size: 12px; color: #8e8e8e; vertical-align: middle; }
+.dongtai h3{ font-size: 25px;  }
+.dongtai h3 span{ font-size: 16px; padding-left: 10px;  }
+.sq-list li{ float: left; }
+.sq { margin-bottom: 50px; }
+.sq h3{ color: #1fbaed; font-size: 25px; margin-bottom: 30px; }
+.sq h3 span{ font-size: 16px; padding-left: 5px; }
+.sq#a2 h3{ color: #12c66b }
+.sq#a3 h3{ color: #fbcc2f }
+.sq#a4 h3{ color: #ed4b20 }
+#a4 li{ width: 286px; height: 287px; position: relative; margin-right: 11px; margin-bottom: 11px; }
+#a4 li img{ width: 100%; height: 100%; }
+#a4 li .info{ position: absolute; bottom: 0; }
+#a4 li .info p{ font-size: 30px; width: 235px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; height: 30px; line-height: 1; margin-left: 25px; color: #fff; }
+#a4 li .info a.more{ font-size: 12px; color: #fff; margin-left: 25px; padding: 10px 0 20px; display: block; }
+#a4 li:nth-child(3){ width: 583px; margin-right: 0; }
+#a4 li:nth-child(6){ margin-right: 0; }
+#a4 li:nth-child(4){ width: 583px;}
+#a4 li:nth-child(3) p,#a4 li:nth-child(4) p{ width: 535px; }
+.hdt{ position: relative; display: flex; width: 100%; height: 100px; }
+.hdt span{ width: 236px; cursor: pointer; height: 130px; position: absolute; display: block; top: 0; left: 0; }
+.hdt span:nth-child(1){ left: 0;  }
+.hdt span:nth-child(2){ left: 236px;  }
+.hdt span:nth-child(3){ left: 472px;  }
+.hdt span:nth-child(4){ left: 708px;  }
+.hdt span:nth-child(5){ left: 944px;  }
+#page { padding: 30px 0 30px;  }
+#page div{ float: right; }
+#page a:hover,#page .current{ display: inline-block; vertical-align: middle;     padding: 0 5px; height: 20px; background: #0283ad; font-size: 14px; text-align: center; line-height: 20px; color: #fff; }
+#page a{display: inline-block; vertical-align: middle;     padding: 0 5px; height: 20px; margin: 0 5px; font-size: 14px; text-align: center; line-height: 20px;}
+.s-list{ height: 82px; line-height: 82px; }
+.s-list li{ margin-top: 24px; margin-right: 52px; padding-right: 52px; vertical-align: middle; line-height: 35px; float: left; border-right: solid 4px #c2c2c2; color: #c2c2c2; font-size: 30px; font-weight: bold; font-family: "å¾®è½¯é›…é»‘"; }
+.s-list li a{  color: #c2c2c2; }
+.s-list li a:hover{ color: #000; }
+.s-info h3{ margin-bottom: 24px; height: 40px; line-height: 40px; background: url(../images/tbg.jpg); width: 100%; font-size: 20px; text-indent: 20px; }
+.s-info li{ width: 275px; height: 350px; position: relative; float: left; margin-right: 26px; margin-bottom: 26px; }
+.s-info li img{   }
+.s-info li:nth-child(4n){ margin-right:0; }
+.s-info li p{ position: absolute; height: 170px; color: #fff; bottom: 0; background: url(../images/ssbg.png) repeat; width: 100%; }
+.s-info li img{ display: block; width: 100%; height: 100%; }
+.s-info li p span{ padding: 137px 0 0 26px; display: block; }
+.window{ position: relative; display: none; width: 100%; background: rgba(0,0,0,0.8); position: fixed; top: 0; left: 0; z-index: 4; }
+.win-info{ width: 1180px; margin: 0 auto; padding-top:20px; }
+.w-list{ float: right; width: 180px; overflow: hidden; }
+.w-list ul{  height: 502px; overflow-y: scroll; width: 200px; }
+.w-list li{ width: 180px; height: 100px; padding-bottom: 20px; cursor: pointer; }
+.w-list li img{ width: 100%; height: 100%; }
+.bw-list{ float: left; width: 976px; }
+.bw-list li img{ width: 100%; display: block; max-height: 502px; }
+.bs-list{ width: 1180px; margin: 0 auto; }
+li .w-info{ position: relative; padding-top: 20px; color: #fff; }
+li .w-info h3{ font-size: 30px; padding-left: 25px;  }
+li .w-info .xinxix{ position: absolute; font-size: 20px; top: 29px; right: 25px; }
+li .w-info p{ font-size: 14px;  line-height: 18px; padding: 30px 25px 25px; }
+.bs-list li{ display: none; }
+.bw-list li{ display: none; }
+.bw-list li:nth-child(1){ display: block; }
+.bs-list li:nth-child(1){ display: block; }
+.window .close{ position: absolute; width: 40px; height: 40px; right: 0; top: 0;  color: #000; cursor: pointer; }
+.window .close img{ width: 100%; height: 100%;  }
+.to-top{ position: fixed; display: none; top: 50%; right: 20px; z-index: 99; }
+.gotop{ padding-bottom: 4px; cursor: pointer; }
+.hu-list{ position: relative; }
+.hu-list .swiper-container{ height: 807px; }
+.hu-list .swiper-container img{ height: 100%; width: 100%; }
+.hu-list .swiper-container .swiper-pagination-bullet{ opacity: 1 !important; background: #fff !important; }
+.hu-list .swiper-container .swiper-pagination-bullet.swiper-pagination-bullet-active{ background: #007aff !important; }
+.hu-list .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{ width: auto; right: 20px !important; bottom: 25px; left: auto; }
+#a2 .hdt{ background: #1fbaed; }
+#a1 .hdt{ background: #12c66b; }
+#a3 .hdt{ background: #fbcc2f; }
+.hdt{ width: 100%; height: 130px; z-index: 4; position: absolute; }
+.hdt span{ text-align: center; width: 180px; }
+.hdt span.active i{ font-size: 34px; padding-top: 24px; }
+.hdt span.active b{ font-size: 22px; }
+.hdt span i{ padding-top: 30px; font-size: 30px; display: block; color: #fff; font-style: normal; }
+.hdt span b{ word-break: break-all; font-size: 18px; display: block; color: #fff; font-weight: 100; }
+.hdt span:after{    content: "······"; color: #fff; position: absolute; left: -49px; top: 45px; letter-spacing: 2px; }
+.hdt span:nth-child(1){ left: 46px; }
+.hdt span:nth-child(2){ left: 274px; }
+.hdt span:nth-child(3){ left: 500px; }
+.hdt span:nth-child(4){ left: 726px; }
+.hdt span:nth-child(5){ left: 952px; }
+.hdt span:nth-child(5):before{   content: "······"; color: #fff; position: absolute; right: -49px; top: 45px; letter-spacing: 2px; }
   .u-flex {
     display: flex;
   }
-  .flex-1 {
+
+  .u-flex1 {
     flex: 1;
+  }
+
+  .u-flex-center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .u-width-full {
+    width: 100%;
+  }
+
+  p {
+    margin: 0;
+  }
+  ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .swiper-container {
+    height: 807px;
+  }
+  .swiper-slide img{
+    width: 100%;
+    height: 100%;
   }
 </style>
 
@@ -39,3 +208,214 @@ into the {body} of the default.hbs template --}}
     </div>
   </a>
 </div>
+
+<div class="inner u-flex u-flex-center" style="padding:70px 0;">
+  <img src="{{asset 'imgs/my.jpg'}}" alt="">
+</div>
+
+<div class="inner hudong">
+  <ul>
+      <li class="sq" id="a1">
+          <h3>美式节庆<span>American Festivals</span></h3>
+          <div class="hu-list">
+              <div class="hdt">
+                <span>
+                      <i>1月</i>
+                      <b>马里亚纳新年</b>
+                  </span><span>
+                      <i>7月</i>
+                      <b>独立日庆典</b>
+                  </span><span>
+                      <i>12月</i>
+                      <b>马里亚纳圣诞节</b>
+                  </span>
+              </div>
+              <div class="swiper-container">
+                  <div class="swiper-wrapper">
+
+                      <div class="swiper-slide">
+                              <a href="/index/content/sence_id/95.html">
+                                  <img src="http://www.mymarianas.cn/Public/images/news/1531020134.png" alt="">
+                              </a>
+                          </div><div class="swiper-slide">
+                              <a href="/index/content/sence_id/89.html">
+                                  <img src="http://www.mymarianas.cn/Public/images/news/1531019996.jpg" alt="">
+                              </a>
+                          </div><div class="swiper-slide">
+                              <a href="/index/content/sence_id/94.html">
+                                  <img src="http://www.mymarianas.cn/Public/images/news/1531020085.jpg" alt="">
+                              </a>
+                          </div>  
+                  </div>
+                  <div class="swiper-pagination"></div>
+              </div>
+          </div>
+      </li>
+      <li class="sq" id="a2">
+          <h3>文化活动<span>Cultural Events</span></h3>
+          <div class="hu-list">
+              <div class="hdt">
+                <span>
+                      <i>2月</i>
+                      <b>天宁辣椒节</b>
+                  </span><span>
+                      <i>4月</i>
+                      <b>火焰树艺术节</b>
+                  </span><span>
+                      <i>5月</i>
+                      <b>马里亚纳美食节暨啤酒花园</b>
+                  </span><span>
+                      <i>9月</i>
+                      <b>塞班国际文化节</b>
+                  </span><span>
+                      <i>10月</i>
+                      <b>马里亚纳啤酒与烤肉节</b>
+                  </span>                           
+              </div>
+              <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                              <a href="/index/content/sence_id/48.html">
+                                  <img src="http://www.mymarianas.cn/Public/images/news/1531023378.png" alt="">
+                              </a>
+                          </div><div class="swiper-slide">
+                              <a href="/index/content/sence_id/47.html">
+                                  <img src="http://www.mymarianas.cn/Public/images/news/1531022893.jpg" alt="">
+                              </a>
+                          </div><div class="swiper-slide">
+                              <a href="/index/content/sence_id/44.html">
+                                  <img src="http://www.mymarianas.cn/Public/images/news/1531023027.jpg" alt="">
+                              </a>
+                          </div><div class="swiper-slide">
+                              <a href="/index/content/sence_id/98.html">
+                                  <img src="http://www.mymarianas.cn/Public/images/news/1531123082.jpg" alt="">
+                              </a>
+                          </div><div class="swiper-slide">
+                              <a href="/index/content/sence_id/43.html">
+                                  <img src="http://www.mymarianas.cn/Public/images/news/1531023091.jpg" alt="">
+                              </a>
+                          </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+              </div>
+          </div>
+      </li>
+      <li class="sq" id="a3">
+          <h3>精彩赛事<span>Sports Events</span></h3>
+          <div class="hu-list">
+              <div class="hdt">
+                <span onclick="3 == 3 ? location.href='/activity/index.html': ''">
+                      <i>3月</i>
+                      <b>塞班马拉松</b>
+                  </span><span onclick="4 == 3 ? location.href='/activity/index.html': ''">
+                      <i>4月</i>
+                      <b>KONQER塞班障碍挑战赛</b>
+                  </span><span onclick="6 == 3 ? location.href='/activity/index.html': ''">
+                      <i>6月</i>
+                      <b>Tagaman 51.50 铁人三项赛</b>
+                  </span><span onclick="10 == 3 ? location.href='/activity/index.html': ''">
+                      <i>10月</i>
+                      <b>IRONMAN 70.3铁人三项赛</b>
+                  </span><span onclick="12 == 3 ? location.href='/activity/index.html': ''">
+                      <i>12月</i>
+                      <b>地狱自行车赛</b>
+                  </span>                            </div>
+              <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                          <a href="http://mymarianas.cn/activity/index.html">
+                                  <img src="http://www.mymarianas.cn/Public/images/news/1531024769.jpg" alt="">
+                              </a>
+                          
+                          </div><div class="swiper-slide">
+                                                                      <a href="/index/content/sence_id/53.html">
+                                  <img src="http://www.mymarianas.cn/Public/images/news/1531025013.jpg" alt="">
+                              </a>
+                          </div><div class="swiper-slide">
+                                                                      <a href="/index/content/sence_id/50.html">
+                                  <img src="http://www.mymarianas.cn/Public/images/news/1531024254.jpg" alt="">
+                              </a>
+                          </div><div class="swiper-slide">
+                                                                      <a href="/index/content/sence_id/51.html">
+                                  <img src="http://www.mymarianas.cn/Public/images/news/1531024424.jpeg" alt="">
+                              </a>
+                          </div><div class="swiper-slide">
+                                                                      <a href="/index/content/sence_id/49.html">
+                                  <img src="http://www.mymarianas.cn/Public/images/news/1531024066.jpg" alt="">
+                              </a>
+                          </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+              </div>
+          </div>
+      </li>
+  </ul>
+</div>
+
+{{#contentFor "scripts"}}
+<script>
+var swiper1 = new Swiper('#a1 .swiper-container', {
+  pagination: '#a1 .swiper-pagination',
+  paginationClickable: true,
+  autoplayDisableOnInteraction : false,
+  loop: true,
+  autoplay: 3000,
+  onSlideChangeEnd: function(swiper){;
+    var index = swiper.activeIndex;
+    if(index == 5){
+      index = 1;
+    }
+    $("#a1 .hdt span").removeClass('active');
+    $("#a1 .hdt span").eq(index - 1).addClass('active');
+  }
+});
+var swiper2 = new Swiper('#a2 .swiper-container', {
+  pagination: '#a2 .swiper-pagination',
+  paginationClickable: true,
+  autoplayDisableOnInteraction : false,
+  loop: true,
+  autoplay: 3000,
+  onSlideChangeEnd: function(swiper){
+    var index = swiper.activeIndex;
+    if(index == 5){
+        index = 1;
+    }
+    $("#a2 .hdt span").removeClass('active');
+    $("#a2 .hdt span").eq(index - 1).addClass('active');
+  }
+});
+var swiper3 = new Swiper('#a3 .swiper-container', {
+  pagination: '#a3 .swiper-pagination',
+  paginationClickable: true,
+  autoplayDisableOnInteraction : false,
+  loop: true,
+  autoplay: 3000,
+  onSlideChangeEnd: function(swiper){
+    var index = swiper.activeIndex;
+    if(index == 5){
+      index = 1;
+    }
+    $("#a3 .hdt span").removeClass('active');
+    $("#a3 .hdt span").eq(index - 1).addClass('active');
+  }
+});
+$("#a1 .hdt span").click(function(){
+$("#a1 .hdt span").removeClass('active');
+$(this).addClass('active');
+  var index = $(this).index() + 1;
+  swiper1.slideTo(index, 1000, false);
+})
+$("#a2 .hdt span").click(function(){
+$("#a2 .hdt span").removeClass('active');
+$(this).addClass('active');
+  var index = $(this).index() + 1;
+  swiper2.slideTo(index, 1000, false);
+})
+$("#a3 .hdt span").click(function(){
+$("#a3 .hdt span").removeClass('active');
+$(this).addClass('active');
+  var index = $(this).index() + 1;
+  swiper3.slideTo(index, 1000, false);
+})
+</script>
+{{/contentFor}}
