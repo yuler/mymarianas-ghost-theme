@@ -9,8 +9,12 @@ routes:
 
 collections:
   /:
-    permalink: /{slug}/
+    permalink: /hot/{slug}/
     template: index
+    filter: primary_tag:index
+  /news/:
+    permalink: /news/{slug}/
+    template: news
 
 taxonomies:
   tag: /tag/{slug}/
