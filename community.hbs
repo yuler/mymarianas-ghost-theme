@@ -5,6 +5,29 @@ into the {body} of the default.hbs template --}}
 {{> site-header}}
 
 <style>
+.sq-list li{ float: left; }
+.sq { margin-bottom: 50px; }
+.sq h3{ color: #1fbaed; font-size: 25px; margin-bottom: 30px; }
+.sq h3 span{ font-size: 16px; padding-left: 5px; }
+.sq#a2 h3{ color: #12c66b }
+.sq#a3 h3{ color: #fbcc2f }
+.sq#a4 h3{ color: #ed4b20 }
+.sq-list li{ width: 393px; height: 280px;  }
+.sq-list li a{display: block;position: relative;width: 100%;height:100%;}
+.sq-list li img{  width: 100%; height: 100% }
+.sq-list li a span{display:block;text-indent:28px;width:100%;position: absolute;left:0px;bottom:27px;font-size:38px;color:#fff;font-weight: bold;}
+#a4 li{ width: 286px; height: 287px; position: relative; margin-right: 11px; margin-bottom: 11px; }
+#a4 li img{ width: 100%; height: 100%; }
+#a4 li .info{ position: absolute; bottom: 0; }
+#a4 li .info p{ font-size: 30px; width: 235px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; height: 30px; line-height: 1; margin-left: 25px; color: #fff; }
+#a4 li .info a.more{ font-size: 12px; color: #fff; margin-left: 25px; padding: 10px 0 20px; display: block; }
+#a4 li:nth-child(3){ width: 583px; margin-right: 0; }
+#a4 li:nth-child(6){ margin-right: 0; }
+#a4 li:nth-child(4){ width: 583px;}
+#a4 li:nth-child(3) p,#a4 li:nth-child(4) p{ width: 535px; }
+</style>
+
+<style>
   .u-flex {
     display: flex;
   }
@@ -25,31 +48,105 @@ into the {body} of the default.hbs template --}}
   p {
     margin: 0;
   }
+  ul,li {
+    margin: 0;
+    padding: 0;
+    list-style: none!important;
+  }
 </style>
 
 <div class="inner u-flex">
   <a href="#a1" class="u-flex1" style="text-decoration:none!important;cursor:pointer;position:relative;">
     <img class="u-width-full" src="http://www.mymarianas.cn/Public/images/banner/1528269173.jpg">
     <div class="u-flex u-flex-center" style="position:absolute;left:0;bottom:20px;width:100%;">
-      <img src="http://www.mymarianas.cn/Public/assets/images/ddd.png" alt="">
-      <p style="font-size: 40px;font-weight:bold;color:white;">食在马里亚纳</p>
-      <img src="http://www.mymarianas.cn/Public/assets/images/ccc.png" alt="">
+      {{!-- <img src="http://www.mymarianas.cn/Public/assets/images/ddd.png" alt=""> --}}
+      {{!-- <p style="font-size: 40px;font-weight:bold;color:white;">食在马里亚纳</p> --}}
+      {{!-- <img src="http://www.mymarianas.cn/Public/assets/images/ccc.png" alt=""> --}}
     </div>
   </a>
   <a href="#a2" class="u-flex1" style="text-decoration:none!important;cursor:pointer;position:relative;">
     <img class="u-width-full" src="http://www.mymarianas.cn/Public/images/banner/1528269300.jpg">
     <div class="u-flex u-flex-center" style="position:absolute;left:0;bottom:20px;width:100%;">
-      <img src="http://www.mymarianas.cn/Public/assets/images/ddd.png" alt="">
-      <p style="font-size: 40px;font-weight:bold;color:white;">住在马里亚纳</p>
-      <img src="http://www.mymarianas.cn/Public/assets/images/ccc.png" alt="">
+      {{!-- <img src="http://www.mymarianas.cn/Public/assets/images/ddd.png" alt=""> --}}
+      {{!-- <p style="font-size: 40px;font-weight:bold;color:white;">住在马里亚纳</p> --}}
+      {{!-- <img src="http://www.mymarianas.cn/Public/assets/images/ccc.png" alt=""> --}}
     </div>
   </a>
   <a href="#a3" class="u-flex1" style="text-decoration:none!important;cursor:pointer;position:relative;">
     <img class="u-width-full" src="http://www.mymarianas.cn/Public/images/banner/1528269302.jpg">
     <div class="u-flex u-flex-center" style="position:absolute;left:0;bottom:20px;width:100%;">
-      <img src="http://www.mymarianas.cn/Public/assets/images/ddd.png" alt="">
-      <p style="font-size: 40px;font-weight:bold;color:white;">行在马里亚纳</p>
-      <img src="http://www.mymarianas.cn/Public/assets/images/ccc.png" alt="">
+      {{!-- <img src="http://www.mymarianas.cn/Public/assets/images/ddd.png" alt=""> --}}
+      {{!-- <p style="font-size: 40px;font-weight:bold;color:white;">行在马里亚纳</p> --}}
+      {{!-- <img src="http://www.mymarianas.cn/Public/assets/images/ccc.png" alt=""> --}}
     </div>
   </a>
+</div>
+
+<div class="inner u-flex u-flex-center" style="padding:70px 0;">
+  <img src="{{asset 'imgs/my.jpg'}}" alt="">
+</div>
+
+<div class="sq inner" id="a1">
+  <h3>食在马里亚纳<span>Restaurants</span></h3>
+  <div class="sq-list clearfix">
+      <li><a href="/index/type/community_id/1/island/1"><img src="http://www.mymarianas.cn/Public/images/banner/1530087666.jpg" alt=""><span></span></a></li>
+      <li><a href="/index/type/community_id/1/island/2"><img src="http://www.mymarianas.cn/Public/images/banner/1530087844.jpg" alt=""><span></span></a></li>
+      <li><a href="/index/type/community_id/1/island/3"><img src="http://www.mymarianas.cn/Public/images/banner/1530087817.jpg" alt=""><span></span></a></li>
+  </div>
+</div>
+
+<div class="sq inner" id="a2">
+  <h3>住在马里亚纳<span>Hotels</span></h3>
+  <div class="sq-list clearfix">
+      <li><a href="/index/type/community_id/2/island/1"><img src="http://www.mymarianas.cn/Public/images/banner/1531302030.jpg" alt=""><span>塞班</span></a></li>
+      <li><a href="/index/type/community_id/2/island/2"><img src="http://www.mymarianas.cn/Public/images/banner/1531302129.jpg" alt=""><span>天宁</span></a></li>
+      <li><a href="/index/type/community_id/2/island/3"><img src="http://www.mymarianas.cn/Public/images/banner/1531302138.jpg" alt=""><span>罗塔</span></a></li>
+  </div>
+</div>
+
+<div class="sq inner" id="a3">
+  <h3>行在马里亚纳<span>Entertainments</span></h3>
+  <div class="sq-list clearfix">
+      <li><a href="/index/type/community_id/3/island/1"><img src="http://www.mymarianas.cn/Public/images/banner/1530087666.jpg" alt=""><span></span></a></li>
+      <li><a href="/index/type/community_id/3/island/2"><img src="http://www.mymarianas.cn/Public/images/banner/1530087844.jpg" alt=""><span></span></a></li>
+      <li><a href="/index/type/community_id/3/island/3"><img src="http://www.mymarianas.cn/Public/images/banner/1530087817.jpg" alt=""><span></span></a></li>
+  </div>
+</div>
+
+<div class="sq inner" id="a4">
+  <h3>游记<span>Travel Notes</span></h3>
+  <div class="sq-list clearfix">
+      <li><a href="http://www.mafengwo.cn/i/6366491.html">
+          <img src="http://www.mymarianas.cn/Public/images/news/1509588914.png" alt="">
+          <div class="info">
+              <p>蚂蜂窝达人游记分享——</p>
+              <a class="more" href="http://www.mafengwo.cn/i/6366491.html">阅读全文</a>
+          </div>
+      </a></li><li><a href="http://www.mafengwo.cn/i/6234647.html">
+          <img src="http://www.mymarianas.cn/Public/images/news/1509590221.png" alt="">
+          <div class="info">
+              <p>蚂蜂窝达人游记分享——塞班游－塞班游记作者：REGRETFREES (北京)</p>
+              <a class="more" href="http://www.mafengwo.cn/i/6234647.html">阅读全文</a>
+          </div>
+      </a></li><li><a href="http://www.mafengwo.cn/i/7849546.html">
+          <img src="http://www.mymarianas.cn/Public/images/news/1509597618.png" alt="">
+          <div class="info">
+              <p>蚂蜂窝达人游记分享——在你最美的年纪，私奔去看海  作者：代言人</p>
+              <a class="more" href="http://www.mafengwo.cn/i/7849546.html">阅读全文</a>
+          </div>
+      </a></li><li><a href="http://www.mafengwo.cn/i/5482299.html">
+          <img src="http://www.mymarianas.cn/Public/images/news/1509603173.png" alt="">
+          <div class="info">
+              <p>蚂蜂窝达人游记分享——“SAIPAN，不一样的玩法！4200米跳伞欣赏不一样的蓝！体验小型滑翔机 作者：Silvia </p>
+              <a class="more" href="http://www.mafengwo.cn/i/5482299.html">阅读全文</a>
+          </div>
+      </a></li><li><a href="http://www.mafengwo.cn/i/3433462.html">
+          <img src="http://www.mymarianas.cn/Public/images/news/1500281249.jpg" alt="">
+          <div class="info">
+              <p>蚂蜂窝达人游记分享——“#消夏计划#无法拒绝的美丽，自驾野马游塞班”（作者：*Ｃαňdγ Ⅷ Years）</p>
+              <a class="more" href="http://www.mafengwo.cn/i/3433462.html">阅读全文</a>
+          </div>
+      </a></li> 
+     </div>
+  </div>
 </div>
