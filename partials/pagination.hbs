@@ -1,9 +1,34 @@
-<nav class="pagination" role="navigation">
+<style>
+  ul.pagination {
+    display: flex;
+    list-style: none;
+  }
+  ul.pagination li {
+    width: 30px;
+    text-align: center;
+  }
+  ul.pagination .pagination-previous,
+  ul.pagination .pagination-next {
+    width: 50px;
+    text-align: center;
+  }
+</style>
+
+<div style="display: none;">
+    <span class="curr-page">{{page}}</span>
+    <span class="total-pages">{{pages}}</span>
+</div>
+
+<ul class="pagination" role="navigation">
+    每页 {{limit}} 条 共 {{pages}} 页 &nbsp;&nbsp;&nbsp;
     {{#if prev}}
-        <a class="newer-posts" href="{{page_url prev}}">&larr; Newer Posts</a>
+        <li class="pagination-previous"><a href="{{page_url prev}}">上一页</a></li>
+    {{else}}
+        <li class="pagination-previous disabled">上一页</li>
     {{/if}}
-    <span class="page-number">Page {{page}} of {{pages}}</span>
     {{#if next}}
-        <a class="older-posts" href="{{page_url next}}">Older Posts &rarr;</a>
+        <li class="pagination-next"><a href="{{page_url next}}">下一页</a></li>
+    {{else}}
+        <li class="pagination-next disabled">下一页</li>
     {{/if}}
-</nav>
+</ul>

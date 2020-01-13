@@ -47,12 +47,13 @@ into the {body} of the default.hbs template --}}
   <img src="{{asset 'imgs/my.jpg'}}" alt="">
 </div>
 
-<div class="inner u-flex" style="margin-top: 100px;margin-bottom: 50px;">
-  <div class="u-flex1" style="border-right: 1px solid #eee; padding-right: 50px;overflow: hidden;">
+<div class="inner u-flex" style="margin-top: 100px;">
+  <div class="u-flex1">
     <div class="u-flex" style="align-items: center;height: 40px;">
       <h2 style="margin: 0;">最新动态</h2>
       <span>&nbsp;&nbsp;News</span>
     </div>
+    <br>
     <ul style="list-style:none;padding:0;">
       {{#foreach posts}}
         <li style="height: 50px;">
@@ -65,4 +66,9 @@ into the {body} of the default.hbs template --}}
       {{/foreach}}
     </ul>
   </div>
+</div>
+
+<div class="inner u-flex" style="margin-bottom: 50px;">
+  <p class="u-flex1"></p>
+  {{pagination}}
 </div>
