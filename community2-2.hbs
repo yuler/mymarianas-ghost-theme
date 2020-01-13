@@ -1,0 +1,100 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{> site-header}}
+
+<div class="inner">
+  <img src="http://www.mymarianas.cn/Public/assets/images/zbanner.jpg" alt="">
+</div>
+
+<div class="inner">
+  <div class="s-list">
+    <ul>
+      <li>分类</li>
+      <li><a href="#a2">酒店</a></li>
+    </ul>
+  </div>
+
+  <div class="s-info" id="a1">
+    <h3>塞班 · 酒店</h3>
+    <ul class="clearfix">
+      <li data-id="36">
+          <img src="http://www.mymarianas.cn/Public/images/news/1531054701.png" alt="">
+          <p><span>Green Field Lion House</span></p>
+      </li><li data-id="35">
+          <img src="http://www.mymarianas.cn/Public/images/news/1531054601.jpg" alt="">
+          <p><span>天宁海景酒店</span></p>
+      </li>               
+    </ul>
+  </div>
+</div>
+<div class="window">
+  <div class="win-info clearfix">
+    <div class="w-list">
+      <ul id="right_img">
+        <!-- 右侧小图 -->
+        <li><img src="http://www.mymarianas.cn/Public/assets/images/w1.jpg" alt=""></li>
+      </ul>
+    </div>
+    <div class="bw-list">
+      <ul id="big_img">
+        <!-- 展示大图 -->
+        <li><img src="http://www.mymarianas.cn/Public/assets/images/w1.jpg" alt=""></li>
+      </ul>
+    </div>
+
+    <div class="close"><img src="http://www.mymarianas.cn/Public/assets/images/close.png" alt=""></div>
+  </div>
+  <div class="bs-list">
+    <ul id="infoss">
+    </ul>
+  </div>
+</div>
+
+{{#contentFor "scripts"}}
+<script>
+  var database = {
+    36: { id: '36', number: '0', title: 'Green Field Lion House', en_title: 'Green Field Lion House', img: 'http://www.mymarianas.cn/Public/images/news/1531054701.png', detail: '', time: '2018-07-08', top: '0', hot: '0', statu: '1', level: '0', level_text: '', remark: '位于天宁中部的华人别墅。温馨、简洁以及友好的价格使这里成为在天宁短暂居留的便利选择。', phone: '+1 670 433 3232', mail: '', address: '天宁', img_1: 'http://www.mymarianas.cn/Public/images/news/1531301545.jpg', img_2: 'http://www.mymarianas.cn/Public/images/news/1531301548.jpg', img_3: 'http://www.mymarianas.cn/Public/images/news/1531301550.jpg', img_4: null, img_5: null, class_id: '3', community_id: '2', island: '2' },
+    35: { id: '35', number: '0', title: '天宁海景酒店', en_title: 'Tinian Ocean View Hotel', img: 'http://www.mymarianas.cn/Public/images/news/1531054601.jpg', detail: '', time: '2018-07-08', top: '0', hot: '0', statu: '1', level: '0', level_text: '', remark: '天宁海景酒店是2017年全新开业的集装箱酒店，位于天宁中心的圣何塞村。集装箱窗口正对天宁海滩，可以将圣何塞的恬静\n海景尽收眼底。', phone: '+1 670 287 8961 / +1 670 433 7777', mail: '', address: '天宁', img_1: 'http://www.mymarianas.cn/Public/images/news/1531301474.jpg', img_2: 'http://www.mymarianas.cn/Public/images/news/1531301477.jpg', img_3: 'http://www.mymarianas.cn/Public/images/news/1531301480.jpg', img_4: null, img_5: null, class_id: '3', community_id: '2', island: '2' }
+  }
+  $(".s-info li").click(function () {
+    var id = $(this).attr("data-id");
+    var img = '';
+    var data = database[id]
+    if (data.img_1 !='http://www.mymarianas.cn/Public/images/news/list.jpg') {
+      img += '<li name="' + data.id + '"><img src="' + data.img_1 + '" alt=""></li>';
+    }
+    if (data.img_2 !='http://www.mymarianas.cn/Public/images/news/list.jpg') {
+      img += '<li ><img src="' + data.img_2 + '" alt=""></li>';
+    }
+    if (data.img_3 !='http://www.mymarianas.cn/Public/images/news/list.jpg') {
+      img += '<li ><img src="' + data.img_3 + '" alt=""></li>';
+    }
+
+    var info = '<li> <div class="w-info"><h3>' + data.title + '</h3> <div class="xinxix"><span>T: ' + data.phone + '</span><span>ADD: ' + data.address + '</span><span>Saipan, MP 96950</span></div><p>' + data.remark + '</p><a href=""></a></div></li>';
+
+    //替换内容
+    $("#right_img").html(img);
+    $("#big_img").html(img);
+    $("#infoss").html(info);
+    aa();
+
+    $(".window").show();
+  })
+
+  function aa() {
+    $(".w-list li").hover(function () {
+      var index = $(this).index();
+      // $(".bs-list li").hide();
+      $(".bs-list li").eq(index).show();
+      $(".bw-list li").hide();
+      $(".bw-list li").eq(index).show();
+    })
+
+    $(".window .close").click(function () {
+      $(".window").hide();
+    })
+  }
+</script>
+{{/contentFor}}

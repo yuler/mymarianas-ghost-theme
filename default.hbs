@@ -23,6 +23,50 @@
             color: white;
         }
 
+        .s-list{ height: 82px; line-height: 82px; }
+        .s-list li{ margin-top: 24px; margin-right: 52px; padding-right: 52px; vertical-align: middle; line-height: 35px; float: left; border-right: solid 4px #c2c2c2; color: #c2c2c2; font-size: 30px; font-weight: bold; font-family: "å¾®è½¯é›…é»‘"; }
+        .s-list li a{  color: #c2c2c2; }
+        .s-list li a:hover{ color: #000; }
+        .s-info h3{ margin-bottom: 24px; height: 40px; line-height: 40px; background: url('http://www.mymarianas.cn/Public/assets/images/tbg.jpg'); width: 100%; font-size: 20px; text-indent: 20px; }
+        .s-info li{ width: 275px; height: 350px; position: relative; float: left; margin-right: 26px; margin-bottom: 26px; }
+        .s-info li img{   }
+        .s-info li:nth-child(4n){ margin-right:0; }
+        .s-info li p{ position: absolute; height: 170px; color: #fff; bottom: 0; background: url('http://www.mymarianas.cn/Public/assets/images/ssbg.png') repeat; width: 100%; }
+        .s-info li img{ display: block; width: 100%; height: 100%; }
+        .s-info li p span{ padding: 137px 0 0 26px; display: block; }
+        .jingdian li{ float: left; position: relative; }
+        .jingdian li{ width: 396px; height: 801px;  }
+        .jingdian li img{ width: 100%; height: 100%; }
+        .jingdian .jd1,.jingdian .jd3{ margin-top: 48px; width: 390px; height: 600px; }
+        .jingdian span{ width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+        .jingdian .jd1 span{ background: url('http://www.mymarianas.cn/Public/assets/images/tinning-bg.png'); }
+        .jingdian .jd2 span{ background: url('http://www.mymarianas.cn/Public/assets/images/saiban-bg.png'); }
+        .jingdian .jd3 span{ background: url('http://www.mymarianas.cn/Public/assets/images/luota-bg.png'); }
+
+        .window{ z-index: 1000!important;position: relative; display: none; width: 100%; background: rgba(0,0,0,0.8); position: fixed; top: 0; left: 0; z-index: 4; }
+        .win-info{ width: 1180px; margin: 0 auto; padding-top:20px; }
+        .w-list{ float: right; width: 180px; overflow: hidden; }
+        .w-list ul{  height: 502px; overflow-y: scroll; width: 200px; }
+        .w-list li{ width: 180px; height: 100px; padding-bottom: 20px; cursor: pointer; }
+        .w-list li img{ width: 100%; height: 100%; }
+        .bw-list{ float: left; width: 976px; }
+        .bw-list li img{ width: 100%; display: block; max-height: 502px; }
+        .bs-list{ width: 1180px; margin: 0 auto; }
+        li .w-info{ position: relative; padding-top: 20px; color: #fff; }
+        li .w-info h3{ font-size: 30px; padding-left: 25px;  }
+
+        li .w-info .xinxix{ position: absolute; font-size: 20px; top: 29px; right: 25px; }
+        li .w-info p{ font-size: 14px;  line-height: 18px; padding: 30px 25px 25px; }
+        .bs-list li{ display: none; }
+        .bw-list li{ display: none; }
+        .bw-list li:nth-child(1){ display: block; }
+        .bs-list li:nth-child(1){ display: block; }
+
+        .window .close{ position: absolute; width: 40px; height: 40px; right: 0; top: 0;  color: #000; cursor: pointer; }
+        .window .close img{ width: 100%; height: 100%;  }
+        .to-top{ position: fixed; display: none; top: 50%; right: 20px; z-index: 99; }
+        .gotop{ padding-bottom: 4px; cursor: pointer; }
+
         /* footer styles */
         .clearfix::after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
         footer.site-footer { background: #313131!important; padding-top: 0!important;padding-bottom: 0!important;}
@@ -31,7 +75,7 @@
         .footer h3{ padding-top: 100px; }
         .footer .erweima{ position: absolute; right: 40px; top: 60px; }
         .lianxi li.lx1{  border-left: solid 1px #807c71; }
-        .lianxi li{ list-style: none; margin: 45px 0; float: left; width: 362px; height: 76px; border-right: solid 1px #807c71; }
+        .lianxi li{ padding: 0;list-style: none; margin: 45px 0; float: left; width: 362px; height: 76px; border-right: solid 1px #807c71; }
         .lianxi li img{ display: block; margin: -10px auto 0; }
         .lianxi li p{ color: #807c71; font-size: 20px; padding-left: 50px; }
         .lianxi li span{ color: #807c71; font-size: 12px; padding-left: 30px; display: block; }
@@ -39,6 +83,9 @@
         .line{ width: 100%; height: 1px; background: #807c71; position: absolute; top: 165px; }
         .women{  color: #807c71; padding-top: 60px; padding-bottom: 30px; padding-left:50px; font-size: 15px; }
         .site-main { margin-top: 80px!important;}
+
+        ul {padding: 0!important;list-style: none!important;}
+        .s-info p {margin: 0!important}
     </style>
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}

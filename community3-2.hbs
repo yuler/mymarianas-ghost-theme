@@ -1,0 +1,96 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{> site-header}}
+
+<div class="inner">
+  <img src="http://www.mymarianas.cn/Public/assets/images/sbanner.jpg" alt="">
+</div>
+
+<div class="inner">
+  <div class="s-list">
+    <ul>
+      <li>分类</li>
+      <li><a href="#a2">出行</a></li>
+    </ul>
+  </div>
+
+  <div class="s-info" id="a1">
+    <h3>天宁 · 出行</h3>
+    <ul class="clearfix">
+      <li data-id="46">
+          <img src="http://www.mymarianas.cn/Public/images/news/1531057227.png" alt="">
+          <p><span>天宁出行</span></p>
+      </li>           
+    </ul>
+  </div>
+</div>
+<div class="window">
+  <div class="win-info clearfix">
+    <div class="w-list">
+      <ul id="right_img">
+        <!-- 右侧小图 -->
+        <li><img src="http://www.mymarianas.cn/Public/assets/images/w1.jpg" alt=""></li>
+      </ul>
+    </div>
+    <div class="bw-list">
+      <ul id="big_img">
+        <!-- 展示大图 -->
+        <li><img src="http://www.mymarianas.cn/Public/assets/images/w1.jpg" alt=""></li>
+      </ul>
+    </div>
+
+    <div class="close"><img src="http://www.mymarianas.cn/Public/assets/images/close.png" alt=""></div>
+  </div>
+  <div class="bs-list">
+    <ul id="infoss">
+    </ul>
+  </div>
+</div>
+
+{{#contentFor "scripts"}}
+<script>
+  var database = {
+    46: { id: '46', number: '0', title: '天宁出行', en_title: '', img: 'http://www.mymarianas.cn/Public/images/news/1531057227.png', detail: '', time: '2018-07-08', top: '0', hot: '0', statu: '1', level: '0', level_text: '', remark: '从塞班前往天宁可以搭乘小型飞机，飞行时间约10分钟，可以乘坐Star Marianas Air的航班，从早\n' + '上七点开始每小时一班，每天12班。\n' + '天宁岛上没有公共交通，从饭店到机场可以选择酒店的接驳服务或是租车服务。岛上的道\n' + '路网络在密林中穿行，部分路段比较原始，因此雇佣导游随行是个比较省心的游览方法。', phone: 'Islander +1 670 433 3025, 安飞士+1 670 433 2847', mail: '', address: '', img_1: 'http://www.mymarianas.cn/Public/images/news/list.jpg', img_2: 'http://www.mymarianas.cn/Public/images/news/list.jpg', img_3: 'http://www.mymarianas.cn/Public/images/news/list.jpg', img_4: null, img_5: null, class_id: '7', community_id: '3', island: '2' }
+  }
+  $(".s-info li").click(function () {
+    var id = $(this).attr("data-id");
+    var img = '';
+    var data = database[id]
+    if (data.img_1 !='http://www.mymarianas.cn/Public/images/news/list.jpg') {
+      img += '<li name="' + data.id + '"><img src="' + data.img_1 + '" alt=""></li>';
+    }
+    if (data.img_2 !='http://www.mymarianas.cn/Public/images/news/list.jpg') {
+      img += '<li ><img src="' + data.img_2 + '" alt=""></li>';
+    }
+    if (data.img_3 !='http://www.mymarianas.cn/Public/images/news/list.jpg') {
+      img += '<li ><img src="' + data.img_3 + '" alt=""></li>';
+    }
+
+    var info = '<li> <div class="w-info"><h3>' + data.title + '</h3> <div class="xinxix"><span>T: ' + data.phone + '</span><span>ADD: ' + data.address + '</span><span>Saipan, MP 96950</span></div><p>' + data.remark + '</p><a href=""></a></div></li>';
+
+    //替换内容
+    $("#right_img").html(img);
+    $("#big_img").html(img);
+    $("#infoss").html(info);
+    aa();
+
+    $(".window").show();
+  })
+
+  function aa() {
+    $(".w-list li").hover(function () {
+      var index = $(this).index();
+      // $(".bs-list li").hide();
+      $(".bs-list li").eq(index).show();
+      $(".bw-list li").hide();
+      $(".bw-list li").eq(index).show();
+    })
+
+    $(".window .close").click(function () {
+      $(".window").hide();
+    })
+  }
+</script>
+{{/contentFor}}

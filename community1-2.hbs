@@ -1,0 +1,96 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{> site-header}}
+
+<div class="inner">
+  <img src="http://www.mymarianas.cn/Public/assets/images/xbanner.jpg" alt="">
+</div>
+
+<div class="inner">
+  <div class="s-list">
+    <ul>
+      <li>分类</li>
+      <li><a href="#a2">美食</a></li>
+    </ul>
+  </div>
+
+  <div class="s-info" id="a1">
+    <h3>塞班 · 美食</h3>
+    <ul class="clearfix">
+      <li data-id="28">
+        <img src="http://www.mymarianas.cn/Public/images/news/1531053065.png" alt="">
+        <p><span>JC. Café</span></p>
+      </li> 
+    </ul>
+  </div>
+</div>
+<div class="window">
+  <div class="win-info clearfix">
+    <div class="w-list">
+      <ul id="right_img">
+        <!-- 右侧小图 -->
+        <li><img src="http://www.mymarianas.cn/Public/assets/images/w1.jpg" alt=""></li>
+      </ul>
+    </div>
+    <div class="bw-list">
+      <ul id="big_img">
+        <!-- 展示大图 -->
+        <li><img src="http://www.mymarianas.cn/Public/assets/images/w1.jpg" alt=""></li>
+      </ul>
+    </div>
+
+    <div class="close"><img src="http://www.mymarianas.cn/Public/assets/images/close.png" alt=""></div>
+  </div>
+  <div class="bs-list">
+    <ul id="infoss">
+    </ul>
+  </div>
+</div>
+
+{{#contentFor "scripts"}}
+<script>
+  var database = {
+    28: {id: "28",number: "0",title: "JC. Café",en_title: "JC. Café",img: "http://www.mymarianas.cn/Public/images/news/1531053065.png",detail: "",time: "2018-07-08",top: "0",hot: "0",statu: "1",level: "0",level_text: "",remark: "天宁最受欢迎的本土餐厅。从查莫洛料理到菲律宾、美式、日式、韩式料理任您选择。搭配薯条的JC汉堡、酥炸厚切的菲↵律宾猪肉料理Lechon Kawali、挤上鲜奶油的蓝莓松饼都是推荐菜色。除此之外也有蛋料理、面类、盖饭、便当等餐点，可↵以外带。店外设有露天座位，室内一角有桌球台、扑克牌机、卡拉OK舞台供客人餐后消遣。汉堡7美元起，便当15美元起",phone: "+1 670 433 3413",mail: "",address: "",img_1: "http://www.mymarianas.cn/Public/images/news/1531302978.png",img_2: "http://www.mymarianas.cn/Public/images/news/1531303003.png",img_3: "http://www.mymarianas.cn/Public/images/news/1531303042.png",img_4: null,img_5: null,class_id: "2",community_id: "1",island: "2"}
+  }
+  $(".s-info li").click(function () {
+    var id = $(this).attr("data-id");
+    var img = '';
+    var data = database[id]
+    if (data.img_1 != 'images/news/list.jpg') {
+      img += '<li name="' + data.id + '"><img src="' + data.img_1 + '" alt=""></li>';
+    }
+    if (data.img_2 != 'images/news/list.jpg') {
+      img += '<li ><img src="' + data.img_2 + '" alt=""></li>';
+    }
+    if (data.img_3 != 'images/news/list.jpg') {
+      img += '<li ><img src="' + data.img_3 + '" alt=""></li>';
+    }
+
+    var info = '<li> <div class="w-info"><h3>' + data.title + '</h3> <div class="xinxix"><span>T: ' + data.phone + '</span><span>ADD: ' + data.address + '</span><span>Saipan, MP 96950</span></div><p>' + data.remark + '</p><a href=""></a></div></li>';
+
+    //替换内容
+    $("#right_img").html(img);
+    $("#big_img").html(img);
+    $("#infoss").html(info);
+    aa();
+
+    $(".window").show();
+  })
+
+  function aa() {
+    $(".w-list li").hover(function () {
+      var index = $(this).index();
+      // $(".bs-list li").hide();
+      $(".bs-list li").eq(index).show();
+      $(".bw-list li").hide();
+      $(".bw-list li").eq(index).show();
+    })
+
+    $(".window .close").click(function () {
+      $(".window").hide();
+    })
+  }
+</script>
+{{/contentFor}}

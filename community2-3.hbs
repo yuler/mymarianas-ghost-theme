@@ -1,0 +1,100 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{> site-header}}
+
+<div class="inner">
+  <img src="http://www.mymarianas.cn/Public/assets/images/zbanner.jpg" alt="">
+</div>
+
+<div class="inner">
+  <div class="s-list">
+    <ul>
+      <li>分类</li>
+      <li><a href="#a2">酒店</a></li>
+    </ul>
+  </div>
+
+  <div class="s-info" id="a1">
+    <h3>塞班 · 酒店</h3>
+    <ul class="clearfix">
+      <li data-id="38">
+          <img src="http://www.mymarianas.cn/Public/images/news/1531055304.png" alt="">
+          <p><span>Valentino Hotel</span></p>
+      </li><li data-id="37">
+          <img src="http://www.mymarianas.cn/Public/images/news/1531054895.png" alt="">
+          <p><span>罗塔度假乡村俱乐部</span></p>
+      </li>             
+    </ul>
+  </div>
+</div>
+<div class="window">
+  <div class="win-info clearfix">
+    <div class="w-list">
+      <ul id="right_img">
+        <!-- 右侧小图 -->
+        <li><img src="http://www.mymarianas.cn/Public/assets/images/w1.jpg" alt=""></li>
+      </ul>
+    </div>
+    <div class="bw-list">
+      <ul id="big_img">
+        <!-- 展示大图 -->
+        <li><img src="http://www.mymarianas.cn/Public/assets/images/w1.jpg" alt=""></li>
+      </ul>
+    </div>
+
+    <div class="close"><img src="http://www.mymarianas.cn/Public/assets/images/close.png" alt=""></div>
+  </div>
+  <div class="bs-list">
+    <ul id="infoss">
+    </ul>
+  </div>
+</div>
+
+{{#contentFor "scripts"}}
+<script>
+  var database = {
+    37: { id: '37', number: '0', title: '罗塔度假乡村俱乐部', en_title: 'Rota Resort & Country Club', img: 'http://www.mymarianas.cn/Public/images/news/1531054895.png', detail: '', time: '2018-07-08', top: '0', hot: '0', statu: '1', level: '0', level_text: '', remark: '位于罗塔北侧的度假村酒店，于1995年开业。共有56间别墅式客房，分为氛围海景房、花园景观房和山景房三种。酒店内\n' + '有Pacifica和Tiki Tiki夕阳烤肉两处餐厅，以及Rota Blue Bar泳池吧台，可以享受休闲私密的假期。酒店前台还可以预定罗\n' + '塔观光服务以及野餐、潜水、海钓等体验项目。', phone: '+1 670 532 1155', mail: '', address: '罗塔', img_1: 'http://www.mymarianas.cn/Public/images/news/1531301573.jpg', img_2: 'http://www.mymarianas.cn/Public/images/news/1531301575.jpg', img_3: 'http://www.mymarianas.cn/Public/images/news/1531301578.jpg', img_4: null, img_5: null, class_id: '3', community_id: '2', island: '3' } ,
+    38: { id: '38', number: '0', title: 'Valentino Hotel', en_title: 'Valentino Hotel', img: 'http://www.mymarianas.cn/Public/images/news/1531055304.png', detail: '', time: '2018-07-08', top: '0', hot: '0', statu: '1', level: '0', level_text: '', remark: '位于宋宋村的公寓式酒店，共有20间套房，设备干净整洁。房型包括单床或双床的一居室套房以及两\n' + '居室套房，每间套房都有厨房，适合长时间停留罗塔的客人。一楼的Tiana’s Coffee House也非常方便\n' + '用餐。', phone: '+1 670 532 8466/9362', mail: '', address: '罗塔', img_1: 'http://www.mymarianas.cn/Public/images/news/1531301591.jpg', img_2: 'http://www.mymarianas.cn/Public/images/news/1531301594.jpg', img_3: 'http://www.mymarianas.cn/Public/images/news/1531301598.jpg', img_4: null, img_5: null, class_id: '3', community_id: '2', island: '3' } ,
+  }
+  $(".s-info li").click(function () {
+    var id = $(this).attr("data-id");
+    var img = '';
+    var data = database[id]
+    if (data.img_1 !='http://www.mymarianas.cn/Public/images/news/list.jpg') {
+      img += '<li name="' + data.id + '"><img src="' + data.img_1 + '" alt=""></li>';
+    }
+    if (data.img_2 !='http://www.mymarianas.cn/Public/images/news/list.jpg') {
+      img += '<li ><img src="' + data.img_2 + '" alt=""></li>';
+    }
+    if (data.img_3 !='http://www.mymarianas.cn/Public/images/news/list.jpg') {
+      img += '<li ><img src="' + data.img_3 + '" alt=""></li>';
+    }
+
+    var info = '<li> <div class="w-info"><h3>' + data.title + '</h3> <div class="xinxix"><span>T: ' + data.phone + '</span><span>ADD: ' + data.address + '</span><span>Saipan, MP 96950</span></div><p>' + data.remark + '</p><a href=""></a></div></li>';
+
+    //替换内容
+    $("#right_img").html(img);
+    $("#big_img").html(img);
+    $("#infoss").html(info);
+    aa();
+
+    $(".window").show();
+  })
+
+  function aa() {
+    $(".w-list li").hover(function () {
+      var index = $(this).index();
+      // $(".bs-list li").hide();
+      $(".bs-list li").eq(index).show();
+      $(".bw-list li").hide();
+      $(".bw-list li").eq(index).show();
+    })
+
+    $(".window .close").click(function () {
+      $(".window").hide();
+    })
+  }
+</script>
+{{/contentFor}}
