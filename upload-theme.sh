@@ -34,11 +34,13 @@ payload_base64=$(base64_url_encode "$PAYLOAD")
 
 header_payload="${header_base64}.${payload_base64}"
 
+echo $header_payload
 # Create the signature
 # signature=$(printf '%s' "${header_payload}" | openssl dgst -binary -sha256 -mac HMAC -macopt hexkey:$SECRET | base64_url_encode)
 signature=$(printf '%s' "${header_payload}" | openssl dgst -binary -sha256 -mac HMAC -macopt hexkey:$SECRET)
+echo $signature
 signature=$(base64_url_encode "$signature")
-
+echo $signature
 # Concat payload and signature into a valid JWT token
 TOKEN="${header_payload}.${signature}"
 
