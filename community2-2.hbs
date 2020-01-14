@@ -62,13 +62,13 @@ into the {body} of the default.hbs template --}}
     var id = $(this).attr("data-id");
     var img = '';
     var data = database[id]
-    if (data.img_1 !='http://www.mymarianas.cn/Public/images/news/list.jpg') {
+    if (data.img_1 !='{{asset 'news/list.jpg'}}') {
       img += '<li name="' + data.id + '"><img src="' + data.img_1 + '" alt=""></li>';
     }
-    if (data.img_2 !='http://www.mymarianas.cn/Public/images/news/list.jpg') {
+    if (data.img_2 !='{{asset 'news/list.jpg'}}') {
       img += '<li ><img src="' + data.img_2 + '" alt=""></li>';
     }
-    if (data.img_3 !='http://www.mymarianas.cn/Public/images/news/list.jpg') {
+    if (data.img_3 !='{{asset 'news/list.jpg'}}') {
       img += '<li ><img src="' + data.img_3 + '" alt=""></li>';
     }
 
