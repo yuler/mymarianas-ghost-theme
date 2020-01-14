@@ -9,18 +9,11 @@ TMPIFS=$IFS
 IFS=':' read ID SECRET <<< "$KEY"
 IFS=$TMPIFS
 
-echo date -R
-
 # Prepare header and payload
 NOW=$(date +'%s')
 FIVE_MINS=$(($NOW + 300))
 HEADER="{\"alg\": \"HS256\",\"typ\": \"JWT\", \"kid\": \"$ID\"}"
 PAYLOAD="{\"iat\":$NOW,\"exp\":$FIVE_MINS,\"aud\": \"/v3/admin/\"}"
-
-echo $NOW
-echo $FIVE_MINS
-echo $HEADER
-echo $PAYLOAD
 
 # Helper function for perfoming base64 URL encoding
 base64_url_encode() {
@@ -36,20 +29,18 @@ payload_base64=$(base64_url_encode "$PAYLOAD")
 
 header_payload="${header_base64}.${payload_base64}"
 
-echo $header_payload
 # Create the signature
 # signature=$(printf '%s' "${header_payload}" | openssl dgst -binary -sha256 -mac HMAC -macopt hexkey:$SECRET | base64_url_encode)
 signature=$(printf '%s' "${header_payload}" | openssl dgst -binary -sha256 -mac HMAC -macopt hexkey:$SECRET)
-echo $signature
 signature=$(base64_url_encode "$signature")
-echo $signature
 # Concat payload and signature into a valid JWT token
 TOKEN="${header_payload}.${signature}"
 
-echo $TOKEN
 # Make an authenticated request to create a post
-curl -H "Authorization: Ghost $TOKEN" \
--X POST \
--F 'file=@./dist/mymarianas-ghost-theme.zip' \
--F 'purpose=themes' \
-"$API_URL/ghost/api/v3/admin/themes/upload"
+response=$(curl -H "Authorization: Ghost $TOKEN" -X POST -F 'file=@./dist/mymarianas-ghost-theme.zip' -F 'purpose=themes' "$API_URL/ghost/api/v3/admin/themes/upload")
+
+if [[ $response =~ "mymarianas-ghost-theme" ]]; then
+  exit 0
+else 
+  exit 1
+fi
