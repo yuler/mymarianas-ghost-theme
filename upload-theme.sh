@@ -39,6 +39,8 @@ TOKEN="${header_payload}.${signature}"
 # Make an authenticated request to create a post
 response=$(curl -H "Authorization: Ghost $TOKEN" -X POST -F 'file=@./dist/mymarianas-ghost-theme.zip' -F 'purpose=themes' "$API_URL/ghost/api/v3/admin/themes/upload")
 
+echo $response
+
 if [[ $response =~ "mymarianas-ghost-theme" ]]; then
   exit 0
 else 
