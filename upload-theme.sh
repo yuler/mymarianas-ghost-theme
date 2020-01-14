@@ -9,6 +9,8 @@ TMPIFS=$IFS
 IFS=':' read ID SECRET <<< "$KEY"
 IFS=$TMPIFS
 
+echo date -R
+
 # Prepare header and payload
 NOW=$(date +'%s')
 FIVE_MINS=$(($NOW + 300))
