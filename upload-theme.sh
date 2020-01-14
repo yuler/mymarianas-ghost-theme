@@ -10,7 +10,7 @@ IFS=':' read ID SECRET <<< "$KEY"
 IFS=$TMPIFS
 
 # Prepare header and payload
-NOW=1578972341
+NOW=$(date +'%s')
 FIVE_MINS=$(($NOW + 300))
 HEADER="{\"alg\": \"HS256\",\"typ\": \"JWT\", \"kid\": \"$ID\"}"
 PAYLOAD="{\"iat\":$NOW,\"exp\":$FIVE_MINS,\"aud\": \"/v3/admin/\"}"
@@ -44,8 +44,8 @@ TOKEN="${header_payload}.${signature}"
 
 echo $TOKEN
 # Make an authenticated request to create a post
-# curl -H "Authorization: Ghost $TOKEN" \
-# -X POST \
-# -F 'file=@./dist/mymarianas-ghost-theme.zip' \
-# -F 'purpose=themes' \
-# "$API_URL/ghost/api/v3/admin/themes/upload"
+curl -H "Authorization: Ghost $TOKEN" \
+-X POST \
+-F 'file=@./dist/mymarianas-ghost-theme.zip' \
+-F 'purpose=themes' \
+"$API_URL/ghost/api/v3/admin/themes/upload"
