@@ -5,7 +5,7 @@ into the {body} of the default.hbs template --}}
 {{> site-header}}
 
 <div class="inner">
-  <img src="http://www.mymarianas.cn/Public/assets/images/sbanner.jpg" alt="">
+  <img src="{{asset 'imgs/sbanner.jpg'}}" alt="">
 </div>
 
 <div class="inner">
@@ -31,17 +31,17 @@ into the {body} of the default.hbs template --}}
     <div class="w-list">
       <ul id="right_img">
         <!-- 右侧小图 -->
-        <li><img src="http://www.mymarianas.cn/Public/assets/images/w1.jpg" alt=""></li>
+        <li><img src="{{asset 'imgs/w1.jpg'}}" alt=""></li>
       </ul>
     </div>
     <div class="bw-list">
       <ul id="big_img">
         <!-- 展示大图 -->
-        <li><img src="http://www.mymarianas.cn/Public/assets/images/w1.jpg" alt=""></li>
+        <li><img src="{{asset 'imgs/w1.jpg'}}" alt=""></li>
       </ul>
     </div>
 
-    <div class="close"><img src="http://www.mymarianas.cn/Public/assets/images/close.png" alt=""></div>
+    <div class="close"><img src="{{asset 'imgs/close.png'}}" alt=""></div>
   </div>
   <div class="bs-list">
     <ul id="infoss">

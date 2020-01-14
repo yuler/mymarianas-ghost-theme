@@ -201,7 +201,7 @@ into the {body} of the default.hbs template --}}
 .luota .show .desc p{font-size: 12px;color: #727171;margin-top: 15px;}
 .luota .show .desc a{display: block;width: 68px;height: 21px;border-radius: 3px;border: 1px solid #f2bb64;text-align: center;line-height: 21px;color: #fff;font-size: 12px;position: static;float: right;margin-top: 5px;margin-bottom: 10px;}
 .tuijian{width: 100%;min-width: 1172px;background: #fff;}
-.tuijian .title{ margin-bottom: 50px; width: 100%;min-width: 1179px;height: 87px;background: url("http://www.mymarianas.cn/Public/assets/images/view/tuijian-tit.jpg") no-repeat center;}
+.tuijian .title{ margin-bottom: 50px; width: 100%;min-width: 1179px;height: 87px;background: url("{{asset 'imgs/view.tuijian'}}-tit.jpg") no-repeat center;}
 .tuijian li{ float: left; margin-right: 27px; margin-bottom: 20px; width: 274px; position: relative; height: 350px;  }
 .tuijian li img{ width: 100%; height: 100%; }
 .tuijian li .caption a{ font-size: 10px;  color: #fff; position: absolute; top: 17px; right: 25px; }
@@ -244,33 +244,33 @@ a { text-decoration: none!important;}
   <a href="#saiban-a" class="u-flex1" style="text-decoration:none!important;cursor:pointer;position:relative;">
     <img class="u-width-full" src="{{asset 'banner/1531188257.jpg'}}">
     <div class="u-flex u-flex-center" style="position:absolute;left:0;bottom:20px;width:100%;">
-      <img src="http://www.mymarianas.cn/Public/assets/images/ddd.png" alt="">
+      <img src="{{asset 'imgs/ddd.png'}}" alt="">
       <p style="font-size: 40px;font-weight:bold;color:white;">塞班岛</p>
-      <img src="http://www.mymarianas.cn/Public/assets/images/ccc.png" alt="">
+      <img src="{{asset 'imgs/ccc.png'}}" alt="">
     </div>
   </a>
   <a href="#tianyu-a" class="u-flex1" style="text-decoration:none!important;cursor:pointer;position:relative;">
     <img class="u-width-full" src="{{asset 'banner/1531188802.jpg'}}">
     <div class="u-flex u-flex-center" style="position:absolute;left:0;bottom:20px;width:100%;">
-      <img src="http://www.mymarianas.cn/Public/assets/images/ddd.png" alt="">
+      <img src="{{asset 'imgs/ddd.png'}}" alt="">
       <p style="font-size: 40px;font-weight:bold;color:white;">天宁岛</p>
-      <img src="http://www.mymarianas.cn/Public/assets/images/ccc.png" alt="">
+      <img src="{{asset 'imgs/ccc.png'}}" alt="">
     </div>
   </a>
   <a href="#luota-a" class="u-flex1" style="text-decoration:none!important;cursor:pointer;position:relative;">
     <img class="u-width-full" src="{{asset 'banner/1531188296.jpg'}}">
     <div class="u-flex u-flex-center" style="position:absolute;left:0;bottom:20px;width:100%;">
-      <img src="http://www.mymarianas.cn/Public/assets/images/ddd.png" alt="">
+      <img src="{{asset 'imgs/ddd.png'}}" alt="">
       <p style="font-size: 40px;font-weight:bold;color:white;">罗塔岛</p>
-      <img src="http://www.mymarianas.cn/Public/assets/images/ccc.png" alt="">
+      <img src="{{asset 'imgs/ccc.png'}}" alt="">
     </div>
   </a>
   <a href="#hot-a" class="u-flex1" style="text-decoration:none!important;cursor:pointer;position:relative;">
     <img class="u-width-full" src="{{asset 'banner/1531188594.jpg'}}">
     <div class="u-flex u-flex-center" style="position:absolute;left:0;bottom:20px;width:100%;">
-      <img src="http://www.mymarianas.cn/Public/assets/images/ddd.png" alt="">
+      <img src="{{asset 'imgs/ddd.png'}}" alt="">
       <p style="font-size: 40px;font-weight:bold;color:white;">主题玩法</p>
-      <img src="http://www.mymarianas.cn/Public/assets/images/ccc.png" alt="">
+      <img src="{{asset 'imgs/ccc.png'}}" alt="">
     </div>
   </a>
 </div>
@@ -284,7 +284,7 @@ a { text-decoration: none!important;}
   </div>
   <div class="container">
     <div class="saibantu">
-      <div class="zhi"><img src="http://www.mymarianas.cn/Public/assets/images/view/zhi.jpg" alt=""></div>
+      <div class="zhi"><img src="{{asset 'imgs/zhi.jpg'}}" alt=""></div>
       <a href="/1.html" onmouseover="sence_get(1,1)">
         <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
         <h5>万岁崖</h5><span>BANZAI CLIFF</span>
@@ -354,7 +354,7 @@ a { text-decoration: none!important;}
   <div class="title"><!-- <img src="images/view/tianyu-tit.jpg" class="conwhole" alt=""> --></div>
     <div class="container">
       <div class="tianyutu">
-        <div class="zhi"><img src="http://www.mymarianas.cn/Public/assets/images/view/zhi.jpg" alt=""></div>
+        <div class="zhi"><img src="{{asset 'imgs/zhi.jpg'}}" alt=""></div>
         <a href="/13.html" onmouseover="sence_get(2,13)">
         <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
         <h5>喷洞</h5><span>Blow Hole</span>
@@ -400,7 +400,7 @@ a { text-decoration: none!important;}
   <div class="title"><!-- <img src="images/view/luota-tit.jpg" class="conwhole" alt=""> --></div>
     <div class="container">
       <div class="luotatu">
-        <div class="zhi"><img src="http://www.mymarianas.cn/Public/assets/images/view/zhi.jpg" alt=""></div>
+        <div class="zhi"><img src="{{asset 'imgs/zhi.jpg'}}" alt=""></div>
         <a href="/20.html" onmouseover="sence_get(3,20)">
         <img src="http://www.mymarianas.cn/Public/images/view/saiban-show.jpg" alt="">
         <h5>艾斯马特莫斯海角</h5><span>AS MATMOS</span>
