@@ -20,43 +20,43 @@ into the {body} of the default.hbs template --}}
     <h3>塞班 · 美食</h3>
     <ul class="clearfix">
       <li data-id="40">
-        <img src="http://www.mymarianas.cn/Public/images/news/1531056332.png" alt="">
+        <img src="{{asset 'news/1531056332.png'}}" alt="">
         <p><span>Moby Dick</span></p>
       </li>
       <li data-id="39">
-        <img src="http://www.mymarianas.cn/Public/images/news/1531056087.png" alt="">
+        <img src="{{asset 'news/1531056087.png'}}" alt="">
         <p><span>Oleai Beach Bar</span></p>
       </li>
       <li data-id="27">
-        <img src="http://www.mymarianas.cn/Public/images/news/1531052856.jpg" alt="">
+        <img src="{{asset 'news/1531052856.jpg'}}" alt="">
         <p><span>Naked Fish</span></p>
       </li>
       <li data-id="26">
-        <img src="http://www.mymarianas.cn/Public/images/news/1531052727.jpg" alt="">
+        <img src="{{asset 'news/1531052727.jpg'}}" alt="">
         <p><span>金八日本料理</span></p>
       </li>
       <li data-id="25">
-        <img src="http://www.mymarianas.cn/Public/images/news/1531052600.jpg" alt="">
+        <img src="{{asset 'news/1531052600.jpg'}}" alt="">
         <p><span>滚石餐厅</span></p>
       </li>
       <li data-id="24">
-        <img src="http://www.mymarianas.cn/Public/images/news/1531052464.png" alt="">
+        <img src="{{asset 'news/1531052464.png'}}" alt="">
         <p><span>乡村之屋</span></p>
       </li>
       <li data-id="23">
-        <img src="http://www.mymarianas.cn/Public/images/news/1531052264.jpg" alt="">
+        <img src="{{asset 'news/1531052264.jpg'}}" alt="">
         <p><span>Bubba Gump</span></p>
       </li>
       <li data-id="22">
-        <img src="http://www.mymarianas.cn/Public/images/news/1531052154.jpg" alt="">
+        <img src="{{asset 'news/1531052154.jpg'}}" alt="">
         <p><span>Surf Club</span></p>
       </li>
       <li data-id="18">
-        <img src="http://www.mymarianas.cn/Public/images/news/1531051873.jpg" alt="">
+        <img src="{{asset 'news/1531051873.jpg'}}" alt="">
         <p><span>Tony Roma’s</span></p>
       </li>
       <li data-id="14">
-        <img src="http://www.mymarianas.cn/Public/images/news/1531051598.jpg" alt="">
+        <img src="{{asset 'news/1531051598.jpg'}}" alt="">
         <p><span>360旋转餐厅</span></p>
       </li>
     </ul>
@@ -88,16 +88,16 @@ into the {body} of the default.hbs template --}}
 {{#contentFor "scripts"}}
 <script>
   var database = {
-    40: {id: "40", number: "0", title: "Moby Dick", en_title: "Moby Dick", img: "http://www.mymarianas.cn/Public/images/news/1531056332.png", detail: "", time: "2018-07-08", top: "0", hot: "0", statu: "1", level: "0", level_text: "", remark: "整体装潢以著名小说《白鲸》为主题，入口以小说中的大白鲸的尾巴作为装饰，外观会让人立即联想到海洋↵与天空。餐厅充分展现了19世纪美国渔村的氛围。近海捕捞的岩石龙虾或是来自缅因州的龙虾料理都是店内↵招牌，鲜美的蛤蜊汤也值得一试。店里每周都会更换晚餐菜单，让常客享用到不同的美味", phone: "+1 670 233 1910", mail: "", address: "加拉班", img_1: "http://www.mymarianas.cn/Public/images/news/1531299183.png", img_2: "http://www.mymarianas.cn/Public/images/news/1531299216.png", img_3: "http://www.mymarianas.cn/Public/images/news/1531300869.jpg", img_4: null, img_5: null, class_id: "2", community_id: "1", island: "1"},
-    39: {id: "39", number: "0", title: "Oleai Beach Bar", en_title: "Oleai Beach Bar", img: "http://www.mymarianas.cn/Public/images/news/1531056087.png", detail: "", time: "2018-07-08", top: "0", hot: "0", statu: "1", level: "0", level_text: "", remark: "地道的本土小餐厅，坐落于美丽的Oleai海滩上。提供物美↵价廉的汉堡、炒饭、牛排等餐食，也可以点杯酒欣赏海↵景。店里也可以投掷飞镖、打街机，适合亲朋好友一起来↵此消磨时光。", phone: "+1 670 234 0228", mail: "", address: "海滨路，San Jose", img_1: "http://www.mymarianas.cn/Public/images/news/1531301011.png", img_2: "http://www.mymarianas.cn/Public/images/news/1531301033.png", img_3: "http://www.mymarianas.cn/Public/images/news/1531301058.png", img_4: null, img_5: null, class_id: "2", community_id: "1", island: "1"},
-    27: {id: "27", number: "0", title: "Naked Fish", en_title: "Naked Fish", img: "http://www.mymarianas.cn/Public/images/news/1531052856.jpg", detail: "", time: "2018-07-08", top: "0", hot: "0", statu: "1", level: "0", level_text: "", remark: "位于海滨路上的全新特色餐厅，仅于每天晚餐时段开放。食客可在此一边欣赏夕阳海景，一遍在现场乐队的表演↵中享受美食。这里的特色包括蒜香章鱼、夏威夷猪排、海鲜、查莫洛烤肉等等", phone: "+1 670 235 3474", mail: "", address: "海滨路（世界度假酒店旁）", img_1: "http://www.mymarianas.cn/Public/images/news/1531301573.png", img_2: "http://www.mymarianas.cn/Public/images/news/1531301614.jpg", img_3: "http://www.mymarianas.cn/Public/images/news/list.jpg", img_4: null, img_5: null, class_id: "2", community_id: "1", island: "1"},
-    26: {id: "26", number: "0", title: "金八日本料理", en_title: "Kinpachi", img: "http://www.mymarianas.cn/Public/images/news/1531052727.jpg", detail: "", time: "2018-07-08", top: "0", hot: "0", statu: "1", level: "0", level_text: "", remark: "1980年开业的金八是塞班首家传统日本料理店。由一对日本夫妇经营，在日本精修厨艺的主厨负责餐点。有定↵食、炸物、盖饭、拉面等主餐到寿司拼盘、碳烤龙虾、火烤海鲜等丰富的日式料理供你选择。此外，金八还是塞↵班为数不多的提供早餐的餐厅之一。", phone: "+1 670 234 6900", mail: "", address: "加拉班", img_1: "http://www.mymarianas.cn/Public/images/news/1531301809.jpg", img_2: "http://www.mymarianas.cn/Public/images/news/1531301812.jpg", img_3: "http://www.mymarianas.cn/Public/images/news/1531301876.png", img_4: null, img_5: null, class_id: "2", community_id: "1", island: "1"},
-    25: {id: "25", number: "0", title: "滚石餐厅", en_title: "Hard Rock Café", img: "http://www.mymarianas.cn/Public/images/news/1531052600.jpg", detail: "", time: "2018-07-08", top: "0", hot: "0", statu: "1", level: "0", level_text: "", remark: "位于DFS环球购物中心中，充满特色的音乐主题装潢和美味↵菜肴吸引着全世界的游客。塞班分店的中央存放着猫王当年↵驾驶过的凯迪拉克轿车原型，餐厅四周还有众多传奇歌手用↵过的收藏品，比如麦当娜80年代巡演的服装、约翰·列侬↵的乐谱手稿原件等等，欧美乐迷不可错过。陪着潮流的音↵乐，品尝地道的美式料理，自有一番别样的享受。", phone: "+1 670 233 7625", mail: "", address: "DFS环球免税店二层", img_1: "http://www.mymarianas.cn/Public/images/news/1531302002.jpg", img_2: "http://www.mymarianas.cn/Public/images/news/1531302007.jpg", img_3: "http://www.mymarianas.cn/Public/images/news/1531302011.jpg", img_4: null, img_5: null, class_id: "2", community_id: "1", island: "1"},
-    24: {id: "24", number: "0", title: "乡村之屋", en_title: "Country House", img: "http://www.mymarianas.cn/Public/images/news/1531052464.png", detail: "", time: "2018-07-08", top: "0", hot: "0", statu: "1", level: "0", level_text: "", remark: "原木搭成的木屋外观搭配牛仔壁画，播放着正统的乡村音乐，营造出拓荒时代的气氛。高级碳烤安格斯牛排是晚↵餐时间吸引人潮的招牌餐点。丰富的肉汁和厚实的口感，美味一直刺激你的味蕾。午餐时段提供肋排、汉堡排、↵以及多样海鲜料理。店内也提供与烤肉相配的葡萄酒，餐饮可外带。", phone: "+1 670 233 8223", mail: "", address: "加拉班", img_1: "http://www.mymarianas.cn/Public/images/news/1531302184.png", img_2: "http://www.mymarianas.cn/Public/images/news/1531302255.png", img_3: "http://www.mymarianas.cn/Public/images/news/list.jpg", img_4: null, img_5: null, class_id: "2", community_id: "1", island: "1"},
-    23: {id: "23", number: "0", title: "Bubba Gump", en_title: "Bubba Gump", img: "http://www.mymarianas.cn/Public/images/news/1531052264.jpg", detail: "", time: "2018-07-08", top: "0", hot: "0", statu: "1", level: "0", level_text: "", remark: "著名美式连锁餐厅，以《阿甘正传》为主题的餐厅装饰以及特色纪念品是这里最大的特点。Bubba Gump提供↵多种不同的特色主题菜品，包括海鲜、牛排等等，其中阿甘主题的特色虾料理则是一定要尝试的美味佳肴！", phone: "+1 670 233 8592", mail: "", address: "加拉班", img_1: "http://www.mymarianas.cn/Public/images/news/1531302401.png", img_2: "http://www.mymarianas.cn/Public/images/news/1531302411.png", img_3: "http://www.mymarianas.cn/Public/images/news/1531302453.png", img_4: null, img_5: null, class_id: "2", community_id: "1", island: "1"},
-    22: {id: "22", number: "0", title: "Surf Club", en_title: "Surf Club", img: "http://www.mymarianas.cn/Public/images/news/1531052154.jpg", detail: "", time: "2018-07-08", top: "0", hot: "0", statu: "1", level: "0", level_text: "", remark: "位于查兰卡诺亚海滩上的风情小馆，这里的招牌就是结↵合了美式大餐与海岛传统美食的菜肴，以及视野绝佳的↵私家海滩。享受着美味的料理、吹着海风，欣赏塞班的↵绝美落日，是一天旅行结束后最惬意的放松。", phone: "+1 670 235 1122", mail: "", address: "Chalan Kanoa", img_1: "http://www.mymarianas.cn/Public/images/news/1531302530.jpg", img_2: "http://www.mymarianas.cn/Public/images/news/1531302579.jpg", img_3: "http://www.mymarianas.cn/Public/images/news/1531302574.jpg", img_4: null, img_5: null, class_id: "2", community_id: "1", island: "1"},
-    18: {id: "18", number: "0", title: "Tony Roma’s", en_title: "Tony Roma’s", img: "http://www.mymarianas.cn/Public/images/news/1531051873.jpg", detail: "", time: "2018-07-08", top: "0", hot: "0", statu: "1", level: "0", level_text: "", remark: "1972年始于佛罗里达、至今在全世界有260多家的连锁↵烤肉店。涂满酱汁、滋味浓厚的火烤肋排是这里的金字↵招牌。倚着红色壁炉和墙壁，坐在朴素的木质餐桌旁，↵食欲大开。现场演出的乐队和昏黄的灯光也营造出恰到↵好处的氛围。餐厅提供牛排、前菜、沙拉、三明治、汉↵堡、甜点等丰富餐食，可以根据个人口味随意选择。", phone: "+1 670 233 3332", mail: "", address: "加拉班", img_1: "http://www.mymarianas.cn/Public/images/news/1531295819.jpg", img_2: "http://www.mymarianas.cn/Public/images/news/1531295824.jpg", img_3: "http://www.mymarianas.cn/Public/images/news/1531295829.jpg", img_4: null, img_5: null, class_id: "2", community_id: "1", island: "1"},
-    14: {id: "14", number: "0", title: "360旋转餐厅", en_title: "360 Revolving Restaurant", img: "http://www.mymarianas.cn/Public/images/news/1531051598.jpg", detail: "", time: "2018-07-08", top: "0", hot: "0", statu: "1", level: "0", level_text: "", remark: "位于马里亚纳商业广场最顶层，是塞班唯一的旋转餐厅。四周的用餐区会以缓慢的↵速度360度旋转，透过落地窗可以看到不断变化的景色，而中央的吧台区则保持↵静止不动。这里提供最优雅的用餐环境以及地道的西餐料理，牛排、海鲜、披萨、↵意面、汉堡等等选择多样。日落时分在这里小酌一杯也是不错的选择。", phone: "+1 670 234 3600", mail: "", address: "Top Mariana Business Plaza 8层", img_1: "http://www.mymarianas.cn/Public/images/news/1531051658.jpg", img_2: "http://www.mymarianas.cn/Public/images/news/1531295440.jpg", img_3: "http://www.mymarianas.cn/Public/images/news/1531295645.png", img_4: "", img_5: "", class_id: "2", community_id: "1", island: "1"}
+    40: {id: "40", number: "0", title: "Moby Dick", en_title: "Moby Dick", img: "{{asset 'news/1531056332.png'}}", detail: "", time: "2018-07-08", top: "0", hot: "0", statu: "1", level: "0", level_text: "", remark: "整体装潢以著名小说《白鲸》为主题，入口以小说中的大白鲸的尾巴作为装饰，外观会让人立即联想到海洋↵与天空。餐厅充分展现了19世纪美国渔村的氛围。近海捕捞的岩石龙虾或是来自缅因州的龙虾料理都是店内↵招牌，鲜美的蛤蜊汤也值得一试。店里每周都会更换晚餐菜单，让常客享用到不同的美味", phone: "+1 670 233 1910", mail: "", address: "加拉班", img_1: "{{asset 'news/1531299183.png'}}", img_2: "{{asset 'news/1531299216.png'}}", img_3: "{{asset 'news/1531300869.jpg'}}", img_4: null, img_5: null, class_id: "2", community_id: "1", island: "1"},
+    39: {id: "39", number: "0", title: "Oleai Beach Bar", en_title: "Oleai Beach Bar", img: "{{asset 'news/1531056087.png'}}", detail: "", time: "2018-07-08", top: "0", hot: "0", statu: "1", level: "0", level_text: "", remark: "地道的本土小餐厅，坐落于美丽的Oleai海滩上。提供物美↵价廉的汉堡、炒饭、牛排等餐食，也可以点杯酒欣赏海↵景。店里也可以投掷飞镖、打街机，适合亲朋好友一起来↵此消磨时光。", phone: "+1 670 234 0228", mail: "", address: "海滨路，San Jose", img_1: "{{asset 'news/1531301011.png'}}", img_2: "{{asset 'news/1531301033.png'}}", img_3: "{{asset 'news/1531301058.png'}}", img_4: null, img_5: null, class_id: "2", community_id: "1", island: "1"},
+    27: {id: "27", number: "0", title: "Naked Fish", en_title: "Naked Fish", img: "{{asset 'news/1531052856.jpg'}}", detail: "", time: "2018-07-08", top: "0", hot: "0", statu: "1", level: "0", level_text: "", remark: "位于海滨路上的全新特色餐厅，仅于每天晚餐时段开放。食客可在此一边欣赏夕阳海景，一遍在现场乐队的表演↵中享受美食。这里的特色包括蒜香章鱼、夏威夷猪排、海鲜、查莫洛烤肉等等", phone: "+1 670 235 3474", mail: "", address: "海滨路（世界度假酒店旁）", img_1: "{{asset 'news/1531301573.png'}}", img_2: "{{asset 'news/1531301614.jpg'}}", img_3: "http://www.mymarianas.cn/Public/images/news/list.jpg", img_4: null, img_5: null, class_id: "2", community_id: "1", island: "1"},
+    26: {id: "26", number: "0", title: "金八日本料理", en_title: "Kinpachi", img: "{{asset 'news/1531052727.jpg'}}", detail: "", time: "2018-07-08", top: "0", hot: "0", statu: "1", level: "0", level_text: "", remark: "1980年开业的金八是塞班首家传统日本料理店。由一对日本夫妇经营，在日本精修厨艺的主厨负责餐点。有定↵食、炸物、盖饭、拉面等主餐到寿司拼盘、碳烤龙虾、火烤海鲜等丰富的日式料理供你选择。此外，金八还是塞↵班为数不多的提供早餐的餐厅之一。", phone: "+1 670 234 6900", mail: "", address: "加拉班", img_1: "{{asset 'news/1531301809.jpg'}}", img_2: "{{asset 'news/1531301812.jpg'}}", img_3: "{{asset 'news/1531301876.png'}}", img_4: null, img_5: null, class_id: "2", community_id: "1", island: "1"},
+    25: {id: "25", number: "0", title: "滚石餐厅", en_title: "Hard Rock Café", img: "{{asset 'news/1531052600.jpg'}}", detail: "", time: "2018-07-08", top: "0", hot: "0", statu: "1", level: "0", level_text: "", remark: "位于DFS环球购物中心中，充满特色的音乐主题装潢和美味↵菜肴吸引着全世界的游客。塞班分店的中央存放着猫王当年↵驾驶过的凯迪拉克轿车原型，餐厅四周还有众多传奇歌手用↵过的收藏品，比如麦当娜80年代巡演的服装、约翰·列侬↵的乐谱手稿原件等等，欧美乐迷不可错过。陪着潮流的音↵乐，品尝地道的美式料理，自有一番别样的享受。", phone: "+1 670 233 7625", mail: "", address: "DFS环球免税店二层", img_1: "{{asset 'news/1531302002.jpg'}}", img_2: "{{asset 'news/1531302007.jpg'}}", img_3: "{{asset 'news/1531302011.jpg'}}", img_4: null, img_5: null, class_id: "2", community_id: "1", island: "1"},
+    24: {id: "24", number: "0", title: "乡村之屋", en_title: "Country House", img: "{{asset 'news/1531052464.png'}}", detail: "", time: "2018-07-08", top: "0", hot: "0", statu: "1", level: "0", level_text: "", remark: "原木搭成的木屋外观搭配牛仔壁画，播放着正统的乡村音乐，营造出拓荒时代的气氛。高级碳烤安格斯牛排是晚↵餐时间吸引人潮的招牌餐点。丰富的肉汁和厚实的口感，美味一直刺激你的味蕾。午餐时段提供肋排、汉堡排、↵以及多样海鲜料理。店内也提供与烤肉相配的葡萄酒，餐饮可外带。", phone: "+1 670 233 8223", mail: "", address: "加拉班", img_1: "{{asset 'news/1531302184.png'}}", img_2: "{{asset 'news/1531302255.png'}}", img_3: "http://www.mymarianas.cn/Public/images/news/list.jpg", img_4: null, img_5: null, class_id: "2", community_id: "1", island: "1"},
+    23: {id: "23", number: "0", title: "Bubba Gump", en_title: "Bubba Gump", img: "{{asset 'news/1531052264.jpg'}}", detail: "", time: "2018-07-08", top: "0", hot: "0", statu: "1", level: "0", level_text: "", remark: "著名美式连锁餐厅，以《阿甘正传》为主题的餐厅装饰以及特色纪念品是这里最大的特点。Bubba Gump提供↵多种不同的特色主题菜品，包括海鲜、牛排等等，其中阿甘主题的特色虾料理则是一定要尝试的美味佳肴！", phone: "+1 670 233 8592", mail: "", address: "加拉班", img_1: "{{asset 'news/1531302401.png'}}", img_2: "{{asset 'news/1531302411.png'}}", img_3: "{{asset 'news/1531302453.png'}}", img_4: null, img_5: null, class_id: "2", community_id: "1", island: "1"},
+    22: {id: "22", number: "0", title: "Surf Club", en_title: "Surf Club", img: "{{asset 'news/1531052154.jpg'}}", detail: "", time: "2018-07-08", top: "0", hot: "0", statu: "1", level: "0", level_text: "", remark: "位于查兰卡诺亚海滩上的风情小馆，这里的招牌就是结↵合了美式大餐与海岛传统美食的菜肴，以及视野绝佳的↵私家海滩。享受着美味的料理、吹着海风，欣赏塞班的↵绝美落日，是一天旅行结束后最惬意的放松。", phone: "+1 670 235 1122", mail: "", address: "Chalan Kanoa", img_1: "{{asset 'news/1531302530.jpg'}}", img_2: "{{asset 'news/1531302579.jpg'}}", img_3: "{{asset 'news/1531302574.jpg'}}", img_4: null, img_5: null, class_id: "2", community_id: "1", island: "1"},
+    18: {id: "18", number: "0", title: "Tony Roma’s", en_title: "Tony Roma’s", img: "{{asset 'news/1531051873.jpg'}}", detail: "", time: "2018-07-08", top: "0", hot: "0", statu: "1", level: "0", level_text: "", remark: "1972年始于佛罗里达、至今在全世界有260多家的连锁↵烤肉店。涂满酱汁、滋味浓厚的火烤肋排是这里的金字↵招牌。倚着红色壁炉和墙壁，坐在朴素的木质餐桌旁，↵食欲大开。现场演出的乐队和昏黄的灯光也营造出恰到↵好处的氛围。餐厅提供牛排、前菜、沙拉、三明治、汉↵堡、甜点等丰富餐食，可以根据个人口味随意选择。", phone: "+1 670 233 3332", mail: "", address: "加拉班", img_1: "{{asset 'news/1531295819.jpg'}}", img_2: "{{asset 'news/1531295824.jpg'}}", img_3: "{{asset 'news/1531295829.jpg'}}", img_4: null, img_5: null, class_id: "2", community_id: "1", island: "1"},
+    14: {id: "14", number: "0", title: "360旋转餐厅", en_title: "360 Revolving Restaurant", img: "{{asset 'news/1531051598.jpg'}}", detail: "", time: "2018-07-08", top: "0", hot: "0", statu: "1", level: "0", level_text: "", remark: "位于马里亚纳商业广场最顶层，是塞班唯一的旋转餐厅。四周的用餐区会以缓慢的↵速度360度旋转，透过落地窗可以看到不断变化的景色，而中央的吧台区则保持↵静止不动。这里提供最优雅的用餐环境以及地道的西餐料理，牛排、海鲜、披萨、↵意面、汉堡等等选择多样。日落时分在这里小酌一杯也是不错的选择。", phone: "+1 670 234 3600", mail: "", address: "Top Mariana Business Plaza 8层", img_1: "{{asset 'news/1531051658.jpg'}}", img_2: "{{asset 'news/1531295440.jpg'}}", img_3: "{{asset 'news/1531295645.png'}}", img_4: "", img_5: "", class_id: "2", community_id: "1", island: "1"}
   }
   $(".s-info li").click(function () {
     var id = $(this).attr("data-id");
