@@ -5,15 +5,15 @@ into the {body} of the default.hbs template --}}
 {{> site-header}}
 
 <style>
-.search button:after{ position: absolute; content: ""; top: 0px; right: 0px; width: 22px; height: 22px; color:#000;background: url('http://www.mymarianas.cn/Public/images/search.png'); }
+.search button:after{ position: absolute; content: ""; top: 0px; right: 0px; width: 22px; height: 22px; color:#000;background: url('{{asset 'imgs/search.png'}}'); }
 .banner{ width: 100%; height: 680px; min-width: 1180px; }
 .head .language{ color: #000; }
 .language{ cursor: pointer; position: relative; font-size: 16px; float: left; color: #fff; line-height: 78px; margin-left: 40px; }
-.language:after{ position: absolute; width: 10px; height: 6px; top: 37px; right: -12px; content: ""; background: url('http://www.mymarianas.cn/Public/images/bottom.png'); }
-.head .language:after{ background: url('http://www.mymarianas.cn/Public/images/bottom-h.png'); background-size: 100% 100%; }
+.language:after{ position: absolute; width: 10px; height: 6px; top: 37px; right: -12px; content: ""; background: url('{{asset 'imgs/bottom.png'}}'); }
+.head .language:after{ background: url('{{asset 'imgs/bottom-h.png'}}'); background-size: 100% 100%; }
 
-.banner .swiper-button-prev{ background-size: 100% 100%; margin-left: -590px; width: 30px; height: 30px; position: absolute; left: 50%; background-image: url('http://www.mymarianas.cn/Public/images/left.png'); }
-.banner .swiper-button-next{ width: 30px; height: 30px; margin-left: 590px;  background-size: 100% 100%; position: absolute; left: 50%; background-image: url('http://www.mymarianas.cn/Public/images/right.png'); }
+.banner .swiper-button-prev{ background-size: 100% 100%; margin-left: -590px; width: 30px; height: 30px; position: absolute; left: 50%; background-image: url('{{asset 'imgs/left.png'}}'); }
+.banner .swiper-button-next{ width: 30px; height: 30px; margin-left: 590px;  background-size: 100% 100%; position: absolute; left: 50%; background-image: url('{{asset 'imgs/right.png'}}'); }
 .banner .swiper-pagination span.swiper-pagination-bullet{ width: 10px; height: 10px; background-color: #fff;}
 .language.hover .er-nav{ padding: 15px 0; display: block; background:  rgba(255,255,255,0.8); }
 .xbanner{ width: 100%; background: #313131; }
@@ -27,13 +27,13 @@ into the {body} of the default.hbs template --}}
 .jingdian li img{ width: 100%; height: 100%; }
 .jingdian .jd1,.jingdian .jd3{ margin-top: 48px; width: 390px; height: 600px; }
 .jingdian span{ width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
-.jingdian .jd1 span{ background: url('http://www.mymarianas.cn/Public/images/tinning-bg.png'); }
-.jingdian .jd2 span{ background: url('http://www.mymarianas.cn/Public/images/saiban-bg.png'); }
-.jingdian .jd3 span{ background: url('http://www.mymarianas.cn/Public/images/luota-bg.png'); }
+.jingdian .jd1 span{ background: url('{{asset 'imgs/tinning-bg.png'}}'); }
+.jingdian .jd2 span{ background: url('{{asset 'imgs/saiban-bg.png'}}'); }
+.jingdian .jd3 span{ background: url('{{asset 'imgs/luota-bg.png'}}'); }
 .gonglue{}
 .gonglue h3{ padding: 40px 0 20px 0; font-size: 25px; }
 .gonglue h3 span{ font-size: 16px;  padding-left: 10px;}
-.gonglue .gl-list{ background: url('http://www.mymarianas.cn/Public/images/gl0.png'); width: 100%; height: 900px; }
+.gonglue .gl-list{ background: url('{{asset 'imgs/gl0.png'}}'); width: 100%; height: 900px; }
 .gonglue .gl-list .gl1{ padding-left: 338px; }
 .gonglue .gl-list .gl2{ padding: 180px 0 0 401px; }
 .gonglue .gl-list .gl3{  }
@@ -97,11 +97,11 @@ into the {body} of the default.hbs template --}}
 .s-list li{ margin-top: 24px; margin-right: 52px; padding-right: 52px; vertical-align: middle; line-height: 35px; float: left; border-right: solid 4px #c2c2c2; color: #c2c2c2; font-size: 30px; font-weight: bold; font-family: "å¾®è½¯é›…é»‘"; }
 .s-list li a{  color: #c2c2c2; }
 .s-list li a:hover{ color: #000; }
-.s-info h3{ margin-bottom: 24px; height: 40px; line-height: 40px; background: url('http://www.mymarianas.cn/Public/images/tbg.jpg'); width: 100%; font-size: 20px; text-indent: 20px; }
+.s-info h3{ margin-bottom: 24px; height: 40px; line-height: 40px; background: url('{{asset 'imgs/tbg.jpg'}}'); width: 100%; font-size: 20px; text-indent: 20px; }
 .s-info li{ width: 275px; height: 350px; position: relative; float: left; margin-right: 26px; margin-bottom: 26px; }
 .s-info li img{   }
 .s-info li:nth-child(4n){ margin-right:0; }
-.s-info li p{ position: absolute; height: 170px; color: #fff; bottom: 0; background: url('http://www.mymarianas.cn/Public/images/ssbg.png') repeat; width: 100%; }
+.s-info li p{ position: absolute; height: 170px; color: #fff; bottom: 0; background: url('{{asset 'imgs/ssbg.png'}}') repeat; width: 100%; }
 .s-info li img{ display: block; width: 100%; height: 100%; }
 .s-info li p span{ padding: 137px 0 0 26px; display: block; }
 .window{ position: relative; display: none; width: 100%; background: rgba(0,0,0,0.8); position: fixed; top: 0; left: 0; z-index: 4; }
