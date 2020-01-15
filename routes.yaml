@@ -7,6 +7,8 @@ routes:
   /community/: community
   /activity/: activity
 
+  /activity/index.html/: activity-index.hbs
+
   /community/1-1/: community1-1
   /community/1-2/: community1-2
   /community/1-3/: community1-3
