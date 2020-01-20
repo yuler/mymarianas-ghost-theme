@@ -1313,7 +1313,7 @@ Usage (In Ghost editor):
 
 .post-full-content h3 {
     margin: 0.5em 0 0.2em;
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     line-height: 1.3em;
     font-weight: 600;
 }
@@ -1330,7 +1330,7 @@ Usage (In Ghost editor):
 
 .post-full-content h4 {
     margin: 0.5em 0 0.2em;
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     font-weight: 600;
 }
 .post-full-content h2 + h4 {
