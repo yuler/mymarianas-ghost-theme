@@ -75,7 +75,8 @@ body {
 .inner {
     margin: 0 auto;
     max-width: 1180px;
-    width: 100%;
+    min-width: 1000px;
+    /*width: 100%;*/
 }
 
 /* Usage:
@@ -91,7 +92,7 @@ body {
 /* 3. Special Template Styles
 /* ---------------------------------------------------------- */
 
-@media (min-width: 900px) {
+/*@media (min-width: 900px) {
     .home-template .post-feed,
     .tag-template .post-feed,
     .author-template .post-feed {
@@ -103,7 +104,7 @@ body {
     .home-template .site-nav {
         position: relative;
     }
-}
+}*/
 
 
 /* 4. Site Header
