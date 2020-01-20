@@ -75,7 +75,7 @@ body {
 .inner {
     margin: 0 auto;
     max-width: 1180px;
-    min-width: 1000px;
+    min-width: 900px;
     /*width: 100%;*/
 }
 
