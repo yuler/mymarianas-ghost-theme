@@ -2080,6 +2080,10 @@ Usage (In Ghost editor):
     align-items: center;
 }
 
+.post-content p {
+    font-size: 16px;
+}
+
 .post-full-content .kg-image {
     max-width: 100%;
 }
