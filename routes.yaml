@@ -1,7 +1,12 @@
 routes:
+  /news/:
+    controller: channel
+    template: news
+    # data: page.home
   /:
-    data: page.home
+    controller: channel
     template: index
+    
   /locations/: locations
   /calendar/: calendar
   /community/: community
@@ -21,14 +26,15 @@ routes:
   /community/3-2/: community3-2
   /community/3-3/: community3-3
 
-collections:
-  /:
-    permalink: /hot/{slug}/
-    template: index
-    filter: primary_tag:index
-  /news/:
-    permalink: /news/{slug}/
-    template: news
+# collections:
+#   /news/:
+#     permalink: /news/{slug}/
+#     template: news
+#     # data: page.home
+#   /:
+#     permalink: /news/{slug}/
+#     template: index
+    # filter: primary_tag:index
 
 taxonomies:
   tag: /tag/{slug}/
