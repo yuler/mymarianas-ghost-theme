@@ -26,11 +26,11 @@ routes:
   /community/3-2/: community3-2
   /community/3-3/: community3-3
 
-# collections:
-#   /news/:
-#     permalink: /news/{slug}/
-#     template: news
-#     # data: page.home
+collections:
+  /news/:
+    permalink: /news/{slug}/
+    template: news
+    # data: page.home
 #   /:
 #     permalink: /news/{slug}/
 #     template: index
